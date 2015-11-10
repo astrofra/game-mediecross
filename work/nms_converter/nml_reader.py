@@ -1,4 +1,11 @@
 import gs
+import gs.plus.render as render
+import gs.plus.camera as camera
+import gs.plus.input as input
+import gs.plus.scene as scene
+import gs.plus.clock as clock
+
+import os
 
 class NmlNode():
 	def __init__(self):
@@ -124,56 +131,114 @@ class NmlReader():
 		self.main_node.LoadNml(format_file, 0, self.main_node)
 
 
-
 def nmlParseVector(_nml_node):
 	return gs.Vector3(float(_nml_node.GetChild("X").m_Data), float(_nml_node.GetChild("Y").m_Data), float(_nml_node.GetChild("Z").m_Data))
 
 
+def cleanNMLString(_str):
+	return _str.replace('"', '')
+
+# Convertion routine
+# - Loads manually each relevant node from a NML file
+# - Recreate each node into the scengraph
+# - Saves the resulting scene into a new file (Json or XML)
+
+folder_in = "in"
+folder_out = "out"
+folder_assets = "../../game/assets/3d/"
+
+gs.GetFilesystem().Mount(gs.StdFileDriver("../../game/pkg.core"), "@core")
+gs.GetFilesystem().Mount(gs.StdFileDriver(folder_assets))
+gs.GetFilesystem().Mount(gs.StdFileDriver(folder_out), "@out")
+
+# Creates an output folder
+if not os.path.exists(folder_out):
+	os.mkdir(folder_out)
+
+# Init the engine
+render.init(640, 400, "../pkg.core")
+scn = None
+
 nml_reader = NmlReader()
-nml_reader.LoadingXmlFile("in/level_0.nms")
 
+for in_file in os.listdir(folder_in):
 
-in_root =  nml_reader.main_node.GetChild("Scene")
-in_items = in_root.GetChilds("Items")
+	if in_file.find(".nms") > -1:
+		# Found a NMS file, creates a new scene
+		scn = scene.new_scene()
 
-for in_item in in_items:
-	mobjects = in_item.GetChilds("MObject")
-	for mobject in mobjects:
+		print("Reading file ", in_file)
+		nml_reader.LoadingXmlFile(os.path.join(folder_in, in_file))
 
-		mitem = mobject.GetChild("MItem")
-		object = mobject.GetChild("Object")
-		item = object.GetChild("Item")
+		in_root =  nml_reader.main_node.GetChild("Scene")
+		in_items = in_root.GetChilds("Items")
 
-		# get item name
-		id = mitem.GetChild("Id")
-		item_name = id.m_Data
+		for in_item in in_items:
+			mobjects = in_item.GetChilds("MObject")
+			for mobject in mobjects:
 
-		# get item geometry
-		geometry_filename = object.GetChild("Geometry").m_Data
+				mitem = mobject.GetChild("MItem")
+				object = mobject.GetChild("Object")
+				item = object.GetChild("Item")
 
-		# transformation
-		rotation = item.GetChild("Rotation")
-		if rotation is None:
-			rotation = gs.Vector3()
-		else:
-			rotation = nmlParseVector(rotation)
+				# get item name
+				id = mitem.GetChild("Id")
+				item_name = cleanNMLString(id.m_Data)
 
-		position = item.GetChild("Position")
-		if position is None:
-			position = gs.Vector3()
-		else:
-			position = nmlParseVector(position)
+				# get item geometry
+				geometry_filename = None
+				if object is not None:
+					geometry = object.GetChild("Geometry")
+					if geometry is not None:
+						geometry_filename = geometry.m_Data
+						geometry_filename = cleanNMLString(geometry_filename)
+						if geometry_filename.find("/") > -1:
+							geometry_filename = geometry_filename.split("/")[-1]
+						geometry_filename = geometry_filename.replace(".nmg", ".geo")
 
-		scale = item.GetChild("Scale")
-		if scale is None:
-			scale = gs.Vector3(1, 1, 1)
-		else:
-			scale = nmlParseVector(scale)
+				# transformation
+				rotation = item.GetChild("Rotation")
+				if rotation is None:
+					rotation = gs.Vector3()
+				else:
+					rotation = nmlParseVector(rotation)
 
-		rotation_order = item.GetChild("RotationOrder")
-		if rotation_order is None:
-			rotation_order = "YXZ"
-		else:
-			rotation_order = rotation_order.m_Data
+				position = item.GetChild("Position")
+				if position is None:
+					position = gs.Vector3()
+				else:
+					position = nmlParseVector(position)
 
-		print(item_name, geometry_filename, rotation_order)
+				scale = item.GetChild("Scale")
+				if scale is None:
+					scale = gs.Vector3(1, 1, 1)
+				else:
+					scale = nmlParseVector(scale)
+
+				rotation_order = item.GetChild("RotationOrder")
+				if rotation_order is None:
+					rotation_order = "YXZ"
+				else:
+					rotation_order = rotation_order.m_Data
+
+				print(item_name, geometry_filename, rotation_order)
+
+				new_node = None
+
+				if geometry_filename is not None and geometry_filename != '':
+					new_node = scene.add_geometry(scn, geometry_filename)
+
+				if new_node is not None:
+					new_node.SetName(item_name)
+					new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
+					new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
+					new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+
+		env_global = gs.Environment()
+		scn.AddComponent(env_global)
+
+		scn.Commit()
+		scn.WaitCommit()
+
+		out_file = os.path.join("@out", in_file.replace(".nms", ".scn"))
+		scn.Save(out_file, gs.SceneSaveContext(render.get_render_system()))
