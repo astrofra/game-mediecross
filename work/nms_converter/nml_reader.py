@@ -1,3 +1,5 @@
+import gs
+
 class NmlNode():
 	def __init__(self):
 		self.m_Data = ""
@@ -123,6 +125,9 @@ class NmlReader():
 
 
 
+def nmlParseVector(_nml_node):
+	return gs.Vector3(float(_nml_node.GetChild("X").m_Data), float(_nml_node.GetChild("Y").m_Data), float(_nml_node.GetChild("Z").m_Data))
+
 
 nml_reader = NmlReader()
 nml_reader.LoadingXmlFile("in/level_0.nms")
@@ -132,5 +137,43 @@ in_root =  nml_reader.main_node.GetChild("Scene")
 in_items = in_root.GetChilds("Items")
 
 for in_item in in_items:
-	mobject = in_item.GetChilds("MObject")
-	print(mobject)
+	mobjects = in_item.GetChilds("MObject")
+	for mobject in mobjects:
+
+		mitem = mobject.GetChild("MItem")
+		object = mobject.GetChild("Object")
+		item = object.GetChild("Item")
+
+		# get item name
+		id = mitem.GetChild("Id")
+		item_name = id.m_Data
+
+		# get item geometry
+		geometry_filename = object.GetChild("Geometry").m_Data
+
+		# transformation
+		rotation = item.GetChild("Rotation")
+		if rotation is None:
+			rotation = gs.Vector3()
+		else:
+			rotation = nmlParseVector(rotation)
+
+		position = item.GetChild("Position")
+		if position is None:
+			position = gs.Vector3()
+		else:
+			position = nmlParseVector(position)
+
+		scale = item.GetChild("Scale")
+		if scale is None:
+			scale = gs.Vector3(1, 1, 1)
+		else:
+			scale = nmlParseVector(scale)
+
+		rotation_order = item.GetChild("RotationOrder")
+		if rotation_order is None:
+			rotation_order = "YXZ"
+		else:
+			rotation_order = rotation_order.m_Data
+
+		print(item_name, geometry_filename, rotation_order)
