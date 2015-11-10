@@ -143,102 +143,115 @@ def cleanNMLString(_str):
 # - Recreate each node into the scengraph
 # - Saves the resulting scene into a new file (Json or XML)
 
-folder_in = "in"
-folder_out = "out"
+root_in = "in"
+root_out = "out"
 folder_assets = "../../game/assets/3d/"
 
 gs.GetFilesystem().Mount(gs.StdFileDriver("../../game/pkg.core"), "@core")
 gs.GetFilesystem().Mount(gs.StdFileDriver(folder_assets))
-gs.GetFilesystem().Mount(gs.StdFileDriver(folder_out), "@out")
-
-# Creates an output folder
-if not os.path.exists(folder_out):
-	os.mkdir(folder_out)
+gs.GetFilesystem().Mount(gs.StdFileDriver(root_out), "@out")
 
 # Init the engine
 render.init(640, 400, "../pkg.core")
-scn = None
 
-nml_reader = NmlReader()
 
-for in_file in os.listdir(folder_in):
+def convert_folder(folder_path):
+	scn = None
 
-	if in_file.find(".nms") > -1:
-		# Found a NMS file, creates a new scene
-		scn = scene.new_scene()
+	nml_reader = NmlReader()
 
-		print("Reading file ", in_file)
-		nml_reader.LoadingXmlFile(os.path.join(folder_in, in_file))
+	for in_file in os.listdir(folder_path):
 
-		in_root =  nml_reader.main_node.GetChild("Scene")
-		in_items = in_root.GetChilds("Items")
+		if os.path.isdir(os.path.join(folder_path, in_file)):
+			convert_folder(os.path.join(folder_path, in_file))
+		else:
+			if in_file.find(".nms") > -1:
+				# Found a NMS file, creates a new scene
+				scn = scene.new_scene()
 
-		for in_item in in_items:
-			mobjects = in_item.GetChilds("MObject")
-			for mobject in mobjects:
+				print("Reading file ", os.path.join(folder_path, in_file))
+				nml_reader.LoadingXmlFile(os.path.join(folder_path, in_file))
 
-				mitem = mobject.GetChild("MItem")
-				object = mobject.GetChild("Object")
-				item = object.GetChild("Item")
+				in_root =  nml_reader.main_node.GetChild("Scene")
+				in_items = in_root.GetChilds("Items")
 
-				# get item name
-				id = mitem.GetChild("Id")
-				item_name = cleanNMLString(id.m_Data)
+				for in_item in in_items:
+					mobjects = in_item.GetChilds("MObject")
+					for mobject in mobjects:
 
-				# get item geometry
-				geometry_filename = None
-				if object is not None:
-					geometry = object.GetChild("Geometry")
-					if geometry is not None:
-						geometry_filename = geometry.m_Data
-						geometry_filename = cleanNMLString(geometry_filename)
-						if geometry_filename.find("/") > -1:
-							geometry_filename = geometry_filename.split("/")[-1]
-						geometry_filename = geometry_filename.replace(".nmg", ".geo")
+						mitem = mobject.GetChild("MItem")
+						object = mobject.GetChild("Object")
+						item = object.GetChild("Item")
 
-				# transformation
-				rotation = item.GetChild("Rotation")
-				if rotation is None:
-					rotation = gs.Vector3()
-				else:
-					rotation = nmlParseVector(rotation)
+						# get item name
+						id = mitem.GetChild("Id")
+						item_name = cleanNMLString(id.m_Data)
 
-				position = item.GetChild("Position")
-				if position is None:
-					position = gs.Vector3()
-				else:
-					position = nmlParseVector(position)
+						# get item geometry
+						geometry_filename = None
+						if object is not None:
+							geometry = object.GetChild("Geometry")
+							if geometry is not None:
+								geometry_filename = geometry.m_Data
+								geometry_filename = cleanNMLString(geometry_filename)
+								if geometry_filename.find("/") > -1:
+									geometry_filename = geometry_filename.split("/")[-1]
+								geometry_filename = geometry_filename.replace(".nmg", ".geo")
 
-				scale = item.GetChild("Scale")
-				if scale is None:
-					scale = gs.Vector3(1, 1, 1)
-				else:
-					scale = nmlParseVector(scale)
+						# transformation
+						rotation = item.GetChild("Rotation")
+						if rotation is None:
+							rotation = gs.Vector3()
+						else:
+							rotation = nmlParseVector(rotation)
 
-				rotation_order = item.GetChild("RotationOrder")
-				if rotation_order is None:
-					rotation_order = "YXZ"
-				else:
-					rotation_order = rotation_order.m_Data
+						position = item.GetChild("Position")
+						if position is None:
+							position = gs.Vector3()
+						else:
+							position = nmlParseVector(position)
 
-				print(item_name, geometry_filename, rotation_order)
+						scale = item.GetChild("Scale")
+						if scale is None:
+							scale = gs.Vector3(1, 1, 1)
+						else:
+							scale = nmlParseVector(scale)
 
-				new_node = None
+						rotation_order = item.GetChild("RotationOrder")
+						if rotation_order is None:
+							rotation_order = "YXZ"
+						else:
+							rotation_order = rotation_order.m_Data
 
-				if geometry_filename is not None and geometry_filename != '':
-					new_node = scene.add_geometry(scn, geometry_filename)
+						# print(item_name, geometry_filename, rotation_order)
 
-				if new_node is not None:
-					new_node.SetName(item_name)
-					new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
-					new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
-					new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+						new_node = None
 
-		env_global = gs.Environment()
-		scn.AddComponent(env_global)
+						if geometry_filename is not None and geometry_filename != '':
+							new_node = scene.add_geometry(scn, geometry_filename)
 
-		scn.Commit()
-		scn.WaitCommit()
+						if new_node is not None:
+							new_node.SetName(item_name)
+							new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
+							new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
+							new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
 
-		out_file = os.path.join("@out", in_file.replace(".nms", ".scn"))
-		scn.Save(out_file, gs.SceneSaveContext(render.get_render_system()))
+				env_global = gs.Environment()
+				scn.AddComponent(env_global)
+
+				scn.Commit()
+				scn.WaitCommit()
+
+				# Creates the output folder
+				folder_out = folder_path.replace(root_in + '\\', '')
+				folder_out = folder_out.replace(root_in + '/', '')
+				folder_out = folder_out.replace(root_in, '')
+
+				if folder_out !='' and not os.path.exists(os.path.join(root_out, folder_out)):
+					os.mkdir(os.path.join(root_out, folder_out))
+
+				out_file = os.path.join("@out", folder_out, in_file.replace(".nms", ".scn"))
+				print('saving to ', out_file)
+				scn.Save(out_file, gs.SceneSaveContext(render.get_render_system()))
+
+convert_folder(root_in)
