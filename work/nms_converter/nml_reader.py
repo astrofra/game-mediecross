@@ -145,10 +145,11 @@ def cleanNMLString(_str):
 
 root_in = "in"
 root_out = "out"
-folder_assets = "../../game/assets/3d/"
+root_assets = "../../game/"
+folder_assets = "assets/3d/"
 
 gs.GetFilesystem().Mount(gs.StdFileDriver("../../game/pkg.core"), "@core")
-gs.GetFilesystem().Mount(gs.StdFileDriver(folder_assets))
+gs.GetFilesystem().Mount(gs.StdFileDriver(root_assets), "@assets")
 gs.GetFilesystem().Mount(gs.StdFileDriver(root_out), "@out")
 
 # Init the engine
@@ -228,7 +229,7 @@ def convert_folder(folder_path):
 						new_node = None
 
 						if geometry_filename is not None and geometry_filename != '':
-							new_node = scene.add_geometry(scn, geometry_filename)
+							new_node = scene.add_geometry(scn, os.path.join(folder_assets, geometry_filename))
 
 						if new_node is not None:
 							new_node.SetName(item_name)
