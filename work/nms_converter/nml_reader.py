@@ -167,6 +167,12 @@ def parse_transformation(item):
 
 	return position, rotation, scale, rotation_order
 
+def get_nml_node_data(node, default_value = None):
+	if node is None:
+		return default_value
+
+	return clean_nml_string(m_Data)
+
 # Convertion routine
 # - Loads manually each relevant node from a NML file
 # - Recreate each node into the scengraph
@@ -203,12 +209,63 @@ def convert_folder(folder_path):
 				nml_reader.LoadingXmlFile(os.path.join(folder_path, in_file))
 
 				in_root =  nml_reader.main_node.GetChild("Scene")
+
 				in_items = in_root.GetChilds("Items")
 
 				for in_item in in_items:
+					#   Loads lights
+					mlights = in_item.GetChilds("MLight")
+
+					for mlight in mlights:
+						mitem = mlight.GetChild("MItem")
+						light = mlight.GetChild("Light")
+						item = light.GetChild("Item")
+
+						# get item name
+						id = mitem.GetChild("Id")
+						item_name = clean_nml_string(id.m_Data)
+
+						# transformation
+						position, rotation, scale, rotation_order = parse_transformation(item)
+
+						new_node = scene.add_light(scn)
+						new_node.SetName(item_name)
+						new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
+						new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
+						new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+
+						#light type
+						light_type = mlight.GetChild("Type")
+						light_type = get_nml_node_data(light_type, "Point")
+
+						light_range = float(get_nml_node_data(mlight.GetChild("Range"), 0.0))
+
+						if light_type == "Point":
+							new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Point)
+							new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
+							new_node.GetComponentsWithAspect("Light")[0].SetShadowRange(float(get_nml_node_data(mlight.GetChild("ShadowRange"), 0.0)))
+
+						if light_type == "Parallel":
+							new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Linear)
+
+						if light_type == "Spot":
+							new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Spot)
+							new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
+							new_node.GetComponentsWithAspect("Light")[0].SetConeAngle(float(get_nml_node_data(mlight.GetChild("ConeAngle"), 30.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetEdgeAngle(float(get_nml_node_data(mlight.GetChild("EdgeAngle"), 15.0)))
+
+						new_node.GetComponentsWithAspect("Light")[0].SetClipDistance(float(get_nml_node_data(mlight.GetChild("ClipDistance"), 300.0)))
+
+						new_node.GetComponentsWithAspect("Light")[0].SetDiffuseIntensity(float(get_nml_node_data(mlight.GetChild("DiffuseIntensity"), 1.0)))
+						new_node.GetComponentsWithAspect("Light")[0].SetSpecularIntensity(float(get_nml_node_data(mlight.GetChild("SpecularIntensity"), 0.0)))
+
+						new_node.GetComponentsWithAspect("Light")[0].SetZNear(float(get_nml_node_data(mlight.GetChild("ZNear"), 0.01)))
+						new_node.GetComponentsWithAspect("Light")[0].SetShadowBias(float(get_nml_node_data(mlight.GetChild("ShadowBias"), 0.01)))
+
+				for in_item in in_items:
+					#   Loads items with geometry
 					mobjects = in_item.GetChilds("MObject")
 					for mobject in mobjects:
-
 						mitem = mobject.GetChild("MItem")
 						object = mobject.GetChild("Object")
 						item = object.GetChild("Item")
@@ -243,6 +300,7 @@ def convert_folder(folder_path):
 							new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
 							new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
 							new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+
 
 				env_global = gs.Environment()
 				scn.AddComponent(env_global)
