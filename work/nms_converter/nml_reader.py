@@ -131,12 +131,41 @@ class NmlReader():
 		self.main_node.LoadNml(format_file, 0, self.main_node)
 
 
-def nmlParseVector(_nml_node):
+def clean_nml_string(_str):
+	return _str.replace('"', '')
+
+
+def parse_nml_vector(_nml_node):
 	return gs.Vector3(float(_nml_node.GetChild("X").m_Data), float(_nml_node.GetChild("Y").m_Data), float(_nml_node.GetChild("Z").m_Data))
 
 
-def cleanNMLString(_str):
-	return _str.replace('"', '')
+def parse_transformation(item):
+	rotation = item.GetChild("Rotation")
+
+	if rotation is None:
+		rotation = gs.Vector3()
+	else:
+		rotation = parse_nml_vector(rotation)
+
+	position = item.GetChild("Position")
+	if position is None:
+		position = gs.Vector3()
+	else:
+		position = parse_nml_vector(position)
+
+	scale = item.GetChild("Scale")
+	if scale is None:
+		scale = gs.Vector3(1, 1, 1)
+	else:
+		scale = parse_nml_vector(scale)
+
+	rotation_order = item.GetChild("RotationOrder")
+	if rotation_order is None:
+		rotation_order = "YXZ"
+	else:
+		rotation_order = rotation_order.m_Data
+
+	return position, rotation, scale, rotation_order
 
 # Convertion routine
 # - Loads manually each relevant node from a NML file
@@ -186,7 +215,7 @@ def convert_folder(folder_path):
 
 						# get item name
 						id = mitem.GetChild("Id")
-						item_name = cleanNMLString(id.m_Data)
+						item_name = clean_nml_string(id.m_Data)
 
 						# get item geometry
 						geometry_filename = None
@@ -194,35 +223,13 @@ def convert_folder(folder_path):
 							geometry = object.GetChild("Geometry")
 							if geometry is not None:
 								geometry_filename = geometry.m_Data
-								geometry_filename = cleanNMLString(geometry_filename)
+								geometry_filename = clean_nml_string(geometry_filename)
 								if geometry_filename.find("/") > -1:
 									geometry_filename = geometry_filename.split("/")[-1]
 								geometry_filename = geometry_filename.replace(".nmg", ".geo")
 
 						# transformation
-						rotation = item.GetChild("Rotation")
-						if rotation is None:
-							rotation = gs.Vector3()
-						else:
-							rotation = nmlParseVector(rotation)
-
-						position = item.GetChild("Position")
-						if position is None:
-							position = gs.Vector3()
-						else:
-							position = nmlParseVector(position)
-
-						scale = item.GetChild("Scale")
-						if scale is None:
-							scale = gs.Vector3(1, 1, 1)
-						else:
-							scale = nmlParseVector(scale)
-
-						rotation_order = item.GetChild("RotationOrder")
-						if rotation_order is None:
-							rotation_order = "YXZ"
-						else:
-							rotation_order = rotation_order.m_Data
+						position, rotation, scale, rotation_order = parse_transformation(item)
 
 						# print(item_name, geometry_filename, rotation_order)
 
@@ -251,8 +258,14 @@ def convert_folder(folder_path):
 				if folder_out !='' and not os.path.exists(os.path.join(root_out, folder_out)):
 					os.makedirs(os.path.join(root_out, folder_out), exist_ok=True)
 
+				# Saves the scene
 				out_file = os.path.join("@out", folder_out, in_file.replace(".nms", ".scn"))
 				print('saving to ', out_file)
 				scn.Save(out_file, gs.SceneSaveContext(render.get_render_system()))
+
+				# Clears the scene
+				scn.Clear()
+				scn.Dispose()
+				scn = None
 
 convert_folder(root_in)
