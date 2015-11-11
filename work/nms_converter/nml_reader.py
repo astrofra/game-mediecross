@@ -249,7 +249,7 @@ def convert_folder(folder_path):
 				folder_out = folder_out.replace(root_in, '')
 
 				if folder_out !='' and not os.path.exists(os.path.join(root_out, folder_out)):
-					os.mkdir(os.path.join(root_out, folder_out))
+					os.makedirs(os.path.join(root_out, folder_out), exist_ok=True)
 
 				out_file = os.path.join("@out", folder_out, in_file.replace(".nms", ".scn"))
 				print('saving to ', out_file)
