@@ -195,15 +195,44 @@ def parse_light_color(light):
 
 	return diffuse, specular, shadow
 
+
+def parse_globals_color(globals):
+	bg_color = globals.GetChild("BackgroundColor")
+
+	if bg_color is None:
+		bg_color = gs.Color.Black
+	else:
+		bg_color = parse_nml_vector(bg_color)
+		bg_color = gs.Color(bg_color.x, bg_color.y, bg_color.z, 1.0)
+
+	ambient_color = globals.GetChild("AmbientColor")
+
+	if ambient_color is None:
+		ambient_color = gs.Color.Grey
+	else:
+		ambient_color = parse_nml_vector(ambient_color)
+		ambient_color = gs.Color(ambient_color.x, ambient_color.y, ambient_color.z, 1.0)
+
+	fog_color = globals.GetChild("FogColor")
+
+	if fog_color is None:
+		fog_color = gs.Color.Black
+	else:
+		fog_color = parse_nml_vector(fog_color)
+		fog_color = gs.Color(fog_color.x, fog_color.y, fog_color.z, 1.0)
+
+	return bg_color, ambient_color, fog_color
+
+
 def get_nml_node_data(node, default_value = None):
 	if node is None:
 		return default_value
 
 	return clean_nml_string(node.m_Data)
 
-# Convertion routine
+# Conversion routine
 # - Loads manually each relevant node from a NML file
-# - Recreate each node into the scengraph
+# - Recreate each node into the scene graph
 # - Saves the resulting scene into a new file (Json or XML)
 
 root_in = "in"
@@ -271,7 +300,6 @@ def convert_folder(folder_path):
 							new_node.GetComponentsWithAspect("Camera")[0].SetZFar(zfar)
 							new_node.GetComponentsWithAspect("Camera")[0].SetZoomFactor(zoom)
 
-
 				# ----------- LIGHT ----------------------
 				for in_item in in_items:
 					#   Loads lights
@@ -297,7 +325,7 @@ def convert_folder(folder_path):
 							new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
 							new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
 
-							#light type
+							# light type
 							light_type = light.GetChild("Type")
 							light_type = get_nml_node_data(light_type, "Point")
 
@@ -357,8 +385,6 @@ def convert_folder(folder_path):
 							# transformation
 							position, rotation, scale, rotation_order = parse_transformation(item)
 
-							# print(item_name, geometry_filename, rotation_order)
-
 							new_node = None
 
 							if geometry_filename is not None and geometry_filename != '':
@@ -370,9 +396,26 @@ def convert_folder(folder_path):
 								new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
 								new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
 
+				# ----------- ENVIRONMENT ----------------------
+				in_globals = in_root.GetChild("Globals")
 
 				env_global = gs.Environment()
 				scn.AddComponent(env_global)
+
+				bg_color, ambient_color, fog_color = parse_globals_color(in_globals)
+
+				ambient_intensity = float(get_nml_node_data(in_globals.GetChild("AmbientIntensity"), 0.5))
+				fog_near = float(get_nml_node_data(in_globals.GetChild("FogNear"), 0.5))
+				fog_far = float(get_nml_node_data(in_globals.GetChild("FogFar"), 0.5))
+
+				env_global.SetBackgroundColor(bg_color)
+
+				env_global.SetAmbientIntensity(ambient_intensity)
+				env_global.SetAmbientColor(ambient_color)
+
+				env_global.SetFogNear(fog_near)
+				env_global.SetFogFar(fog_far)
+				env_global.SetFogColor(fog_color)
 
 				scn.Commit()
 				scn.WaitCommit()
