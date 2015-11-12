@@ -283,14 +283,51 @@ def convert_folder(folder_path):
 						if child_item != -1 and parent_item != -1:
 							links.append({'child':child_item, 'parent': parent_item})
 
-				# ----------- CAMERA ----------------------
+				# ----------- INSTANCES ----------------------
+				for in_item in in_items:
+					#   Loads instances
+					instances = in_item.GetChilds("Instance")
+
+					for instance in instances:
+						mitem = instance.GetChild("MItem")
+						item = instance.GetChild("Item")
+						template = instance.GetChild("Template")
+
+						if mitem is not None and mitem.GetChild("Active") is not None and mitem.GetChild("Helper") is None:
+							instance_path = get_nml_node_data(instance.GetChild("Template"))
+
+							if instance_path is not None:
+								# get item name
+								item_name = get_nml_node_data(mitem.GetChild("Id"), "default_name")
+								uid = int(get_nml_node_data(mitem.GetChild("UId"), -1))
+
+								# transformation
+								position, rotation, scale, rotation_order = parse_transformation(item)
+
+								new_node = gs.Node(item_name)
+								scn.AddNode(new_node)
+
+								node_transform = gs.Transform()
+								node_transform.SetPosition(position)
+								node_transform.SetRotation(rotation)
+								node_transform.SetScale(scale)
+								new_node.AddComponent(node_transform)
+
+								instance_path = instance_path.replace(".nms", ".scn")
+								instance_path = instance_path.replace("scenes/", folder_assets)
+
+								node_instance = gs.Instance()
+								node_instance.SetPath(instance_path)
+								new_node.AddComponent(node_instance)
+
+				# ----------- CAMERAS ----------------------
 				for in_item in in_items:
 					#   Loads cameras
 					mcameras = in_item.GetChilds("MCamera")
 
 					for mcamera in mcameras:
 						mitem = mcamera.GetChild("MItem")
-						if mitem is not None and mitem.GetChild("Active") is not None:
+						if mitem is not None and mitem.GetChild("Active") is not None and mitem.GetChild("Helper") is None:
 							camera = mcamera.GetChild("Camera")
 							item = camera.GetChild("Item")
 
@@ -303,7 +340,7 @@ def convert_folder(folder_path):
 
 							znear = float(get_nml_node_data(item.GetChild("ZNear"), 0.2))
 							zfar = float(get_nml_node_data(item.GetChild("ZFar"), 50000.0))
-							zoom = float(get_nml_node_data(item.GetChild("ZoomFactor"), 5.0))
+							zoom = float(get_nml_node_data(item.GetChild("ZoomFactor"), 5.0)) / 2.0
 
 							new_node = scene.add_camera(scn)
 							new_node.SetName(item_name)
@@ -323,7 +360,7 @@ def convert_folder(folder_path):
 
 					for mlight in mlights:
 						mitem = mlight.GetChild("MItem")
-						if mitem is not None and mitem.GetChild("Active") is not None:
+						if mitem is not None and mitem.GetChild("Active") is not None and mitem.GetChild("Helper") is None:
 							light = mlight.GetChild("Light")
 							item = light.GetChild("Item")
 
@@ -350,7 +387,6 @@ def convert_folder(folder_path):
 							if light_type == "Point":
 								new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Point)
 								new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
-								new_node.GetComponentsWithAspect("Light")[0].SetShadowRange(float(get_nml_node_data(mlight.GetChild("ShadowRange"), 0.0)))
 
 							if light_type == "Parallel":
 								new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Linear)
@@ -358,20 +394,21 @@ def convert_folder(folder_path):
 							if light_type == "Spot":
 								new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Spot)
 								new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
-								new_node.GetComponentsWithAspect("Light")[0].SetConeAngle(float(get_nml_node_data(mlight.GetChild("ConeAngle"), 30.0)))
-								new_node.GetComponentsWithAspect("Light")[0].SetEdgeAngle(float(get_nml_node_data(mlight.GetChild("EdgeAngle"), 15.0)))
+								new_node.GetComponentsWithAspect("Light")[0].SetConeAngle(float(get_nml_node_data(light.GetChild("ConeAngle"), 30.0)))
+								new_node.GetComponentsWithAspect("Light")[0].SetEdgeAngle(float(get_nml_node_data(light.GetChild("EdgeAngle"), 15.0)))
 
-							new_node.GetComponentsWithAspect("Light")[0].SetClipDistance(float(get_nml_node_data(mlight.GetChild("ClipDistance"), 300.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetShadowRange(float(get_nml_node_data(light.GetChild("ShadowRange"), 0.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetClipDistance(float(get_nml_node_data(light.GetChild("ClipDistance"), 300.0)))
 
 							new_node.GetComponentsWithAspect("Light")[0].SetDiffuseColor(diffuse_color)
 							new_node.GetComponentsWithAspect("Light")[0].SetSpecularColor(specular_color)
 							new_node.GetComponentsWithAspect("Light")[0].SetShadowColor(shadow_color)
 
-							new_node.GetComponentsWithAspect("Light")[0].SetDiffuseIntensity(float(get_nml_node_data(mlight.GetChild("DiffuseIntensity"), 1.0)))
-							new_node.GetComponentsWithAspect("Light")[0].SetSpecularIntensity(float(get_nml_node_data(mlight.GetChild("SpecularIntensity"), 0.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetDiffuseIntensity(float(get_nml_node_data(light.GetChild("DiffuseIntensity"), 1.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetSpecularIntensity(float(get_nml_node_data(light.GetChild("SpecularIntensity"), 0.0)))
 
-							new_node.GetComponentsWithAspect("Light")[0].SetZNear(float(get_nml_node_data(mlight.GetChild("ZNear"), 0.01)))
-							new_node.GetComponentsWithAspect("Light")[0].SetShadowBias(float(get_nml_node_data(mlight.GetChild("ShadowBias"), 0.01)))
+							new_node.GetComponentsWithAspect("Light")[0].SetZNear(float(get_nml_node_data(light.GetChild("ZNear"), 0.01)))
+							new_node.GetComponentsWithAspect("Light")[0].SetShadowBias(float(get_nml_node_data(light.GetChild("ShadowBias"), 0.01)))
 
 							uid_dict[str(uid)] = new_node
 
@@ -381,7 +418,7 @@ def convert_folder(folder_path):
 					mobjects = in_item.GetChilds("MObject")
 					for mobject in mobjects:
 						mitem = mobject.GetChild("MItem")
-						if mitem is not None and mitem.GetChild("Active") is not None:
+						if mitem is not None and mitem.GetChild("Active") is not None and mitem.GetChild("Helper") is None:
 							object = mobject.GetChild("Object")
 							item = object.GetChild("Item")
 
