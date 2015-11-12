@@ -261,13 +261,27 @@ def convert_folder(folder_path):
 			if in_file.find(".nms") > -1:
 				# Found a NMS file, creates a new scene
 				scn = scene.new_scene()
+				links = []
+				uid_dict = {}
 
 				print("Reading file ", os.path.join(folder_path, in_file))
 				nml_reader.LoadingXmlFile(os.path.join(folder_path, in_file))
 
-				in_root =  nml_reader.main_node.GetChild("Scene")
-
+				in_root = nml_reader.main_node.GetChild("Scene")
 				in_items = in_root.GetChilds("Items")
+
+				# ----------- LINKAGE ----------------------
+				in_links_root = in_root.GetChild("Links")
+
+				if in_links_root is not None:
+					in_links = in_links_root.GetChilds("Link")
+
+					for in_link in in_links:
+						child_item = int(get_nml_node_data(in_link.GetChild("Item"), -1))
+						parent_item = int(get_nml_node_data(in_link.GetChild("Link"), -1))
+
+						if child_item != -1 and parent_item != -1:
+							links.append({'child':child_item, 'parent': parent_item})
 
 				# ----------- CAMERA ----------------------
 				for in_item in in_items:
@@ -282,7 +296,7 @@ def convert_folder(folder_path):
 
 							# get item name
 							item_name = get_nml_node_data(mitem.GetChild("Id"), "default_name")
-							uid = get_nml_node_data(mitem.GetChild("Uid"), -1)
+							uid = int(get_nml_node_data(mitem.GetChild("UId"), -1))
 
 							# transformation
 							position, rotation, scale, rotation_order = parse_transformation(item)
@@ -300,6 +314,8 @@ def convert_folder(folder_path):
 							new_node.GetComponentsWithAspect("Camera")[0].SetZFar(zfar)
 							new_node.GetComponentsWithAspect("Camera")[0].SetZoomFactor(zoom)
 
+							uid_dict[str(uid)] = new_node
+
 				# ----------- LIGHT ----------------------
 				for in_item in in_items:
 					#   Loads lights
@@ -313,7 +329,7 @@ def convert_folder(folder_path):
 
 							# get item name
 							item_name = get_nml_node_data(mitem.GetChild("Id"), "default_name")
-							uid = get_nml_node_data(mitem.GetChild("Uid"), -1)
+							uid = int(get_nml_node_data(mitem.GetChild("UId"), -1))
 
 							# transformation
 							position, rotation, scale, rotation_order = parse_transformation(item)
@@ -357,7 +373,9 @@ def convert_folder(folder_path):
 							new_node.GetComponentsWithAspect("Light")[0].SetZNear(float(get_nml_node_data(mlight.GetChild("ZNear"), 0.01)))
 							new_node.GetComponentsWithAspect("Light")[0].SetShadowBias(float(get_nml_node_data(mlight.GetChild("ShadowBias"), 0.01)))
 
-				# ----------- GEOMETRIES ----------------------
+							uid_dict[str(uid)] = new_node
+
+				# ----------- GEOMETRIES & NULL OBJECTS ----------------------
 				for in_item in in_items:
 					#   Loads items with geometry
 					mobjects = in_item.GetChilds("MObject")
@@ -369,7 +387,7 @@ def convert_folder(folder_path):
 
 							# get item name
 							item_name = get_nml_node_data(mitem.GetChild("Id"), "default_name")
-							uid = get_nml_node_data(mitem.GetChild("Uid"), -1)
+							uid = int(get_nml_node_data(mitem.GetChild("UId"), -1))
 
 							# get item geometry
 							geometry_filename = None
@@ -389,12 +407,23 @@ def convert_folder(folder_path):
 
 							if geometry_filename is not None and geometry_filename != '':
 								new_node = scene.add_geometry(scn, os.path.join(folder_assets, geometry_filename))
+							else:
+								new_node = scene.add_geometry(scn, "")
 
 							if new_node is not None:
 								new_node.SetName(item_name)
 								new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
 								new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
 								new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+
+								uid_dict[str(uid)] = new_node
+
+				# ----------- RE-LINKAGE ----------------------
+				for linkage in links:
+					if linkage['parent'] is not None and linkage['child'] is not None:
+
+						if str(linkage['child']) in uid_dict and str(linkage['parent']) in uid_dict:
+							uid_dict[str(linkage['child'])].GetComponentsWithAspect("Transform")[0].SetParent(uid_dict[str(linkage['parent'])])
 
 				# ----------- ENVIRONMENT ----------------------
 				in_globals = in_root.GetChild("Globals")
