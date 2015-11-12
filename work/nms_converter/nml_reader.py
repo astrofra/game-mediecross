@@ -240,6 +240,39 @@ def convert_folder(folder_path):
 
 				in_items = in_root.GetChilds("Items")
 
+				# ----------- CAMERA ----------------------
+				for in_item in in_items:
+					#   Loads cameras
+					mcameras = in_item.GetChilds("MCamera")
+
+					for mcamera in mcameras:
+						mitem = mcamera.GetChild("MItem")
+						if mitem is not None and mitem.GetChild("Active") is not None:
+							camera = mcamera.GetChild("Camera")
+							item = camera.GetChild("Item")
+
+							# get item name
+							item_name = get_nml_node_data(mitem.GetChild("Id"), "default_name")
+							uid = get_nml_node_data(mitem.GetChild("Uid"), -1)
+
+							# transformation
+							position, rotation, scale, rotation_order = parse_transformation(item)
+
+							znear = float(get_nml_node_data(item.GetChild("ZNear"), 0.2))
+							zfar = float(get_nml_node_data(item.GetChild("ZFar"), 50000.0))
+							zoom = float(get_nml_node_data(item.GetChild("ZoomFactor"), 5.0))
+
+							new_node = scene.add_camera(scn)
+							new_node.SetName(item_name)
+							new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
+							new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
+
+							new_node.GetComponentsWithAspect("Camera")[0].SetZNear(znear)
+							new_node.GetComponentsWithAspect("Camera")[0].SetZFar(zfar)
+							new_node.GetComponentsWithAspect("Camera")[0].SetZoomFactor(zoom)
+
+
+				# ----------- LIGHT ----------------------
 				for in_item in in_items:
 					#   Loads lights
 					mlights = in_item.GetChilds("MLight")
@@ -251,8 +284,8 @@ def convert_folder(folder_path):
 							item = light.GetChild("Item")
 
 							# get item name
-							id = mitem.GetChild("Id")
-							item_name = clean_nml_string(id.m_Data)
+							item_name = get_nml_node_data(mitem.GetChild("Id"), "default_name")
+							uid = get_nml_node_data(mitem.GetChild("Uid"), -1)
 
 							# transformation
 							position, rotation, scale, rotation_order = parse_transformation(item)
@@ -268,7 +301,7 @@ def convert_folder(folder_path):
 							light_type = light.GetChild("Type")
 							light_type = get_nml_node_data(light_type, "Point")
 
-							light_range = float(get_nml_node_data(mlight.GetChild("Range"), 0.0))
+							light_range = float(get_nml_node_data(light.GetChild("Range"), 0.0))
 
 							if light_type == "Point":
 								new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Point)
@@ -296,6 +329,7 @@ def convert_folder(folder_path):
 							new_node.GetComponentsWithAspect("Light")[0].SetZNear(float(get_nml_node_data(mlight.GetChild("ZNear"), 0.01)))
 							new_node.GetComponentsWithAspect("Light")[0].SetShadowBias(float(get_nml_node_data(mlight.GetChild("ShadowBias"), 0.01)))
 
+				# ----------- GEOMETRIES ----------------------
 				for in_item in in_items:
 					#   Loads items with geometry
 					mobjects = in_item.GetChilds("MObject")
@@ -306,8 +340,8 @@ def convert_folder(folder_path):
 							item = object.GetChild("Item")
 
 							# get item name
-							id = mitem.GetChild("Id")
-							item_name = clean_nml_string(id.m_Data)
+							item_name = get_nml_node_data(mitem.GetChild("Id"), "default_name")
+							uid = get_nml_node_data(mitem.GetChild("Uid"), -1)
 
 							# get item geometry
 							geometry_filename = None
