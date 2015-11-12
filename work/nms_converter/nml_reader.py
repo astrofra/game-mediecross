@@ -167,11 +167,39 @@ def parse_transformation(item):
 
 	return position, rotation, scale, rotation_order
 
+
+def parse_light_color(light):
+	diffuse = light.GetChild("Diffuse")
+
+	if diffuse is None:
+		diffuse = gs.Color.White
+	else:
+		diffuse = parse_nml_vector(diffuse)
+		diffuse = gs.Color(diffuse.x, diffuse.y, diffuse.z, 1.0)
+
+	specular = light.GetChild("Specular")
+
+	if specular is None:
+		specular = gs.Color.Black
+	else:
+		specular = parse_nml_vector(specular)
+		specular = gs.Color(specular.x, specular.y, specular.z, 1.0)
+
+	shadow = light.GetChild("ShadowColor")
+
+	if shadow is None:
+		shadow = gs.Color.Black
+	else:
+		shadow = parse_nml_vector(shadow)
+		shadow = gs.Color(shadow.x, shadow.y, shadow.z, 1.0)
+
+	return diffuse, specular, shadow
+
 def get_nml_node_data(node, default_value = None):
 	if node is None:
 		return default_value
 
-	return clean_nml_string(m_Data)
+	return clean_nml_string(node.m_Data)
 
 # Convertion routine
 # - Loads manually each relevant node from a NML file
@@ -218,88 +246,95 @@ def convert_folder(folder_path):
 
 					for mlight in mlights:
 						mitem = mlight.GetChild("MItem")
-						light = mlight.GetChild("Light")
-						item = light.GetChild("Item")
+						if mitem is not None and mitem.GetChild("Active") is not None:
+							light = mlight.GetChild("Light")
+							item = light.GetChild("Item")
 
-						# get item name
-						id = mitem.GetChild("Id")
-						item_name = clean_nml_string(id.m_Data)
+							# get item name
+							id = mitem.GetChild("Id")
+							item_name = clean_nml_string(id.m_Data)
 
-						# transformation
-						position, rotation, scale, rotation_order = parse_transformation(item)
+							# transformation
+							position, rotation, scale, rotation_order = parse_transformation(item)
+							diffuse_color, specular_color, shadow_color = parse_light_color(light)
 
-						new_node = scene.add_light(scn)
-						new_node.SetName(item_name)
-						new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
-						new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
-						new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+							new_node = scene.add_light(scn)
+							new_node.SetName(item_name)
+							new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
+							new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
+							new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
 
-						#light type
-						light_type = mlight.GetChild("Type")
-						light_type = get_nml_node_data(light_type, "Point")
+							#light type
+							light_type = light.GetChild("Type")
+							light_type = get_nml_node_data(light_type, "Point")
 
-						light_range = float(get_nml_node_data(mlight.GetChild("Range"), 0.0))
+							light_range = float(get_nml_node_data(mlight.GetChild("Range"), 0.0))
 
-						if light_type == "Point":
-							new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Point)
-							new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
-							new_node.GetComponentsWithAspect("Light")[0].SetShadowRange(float(get_nml_node_data(mlight.GetChild("ShadowRange"), 0.0)))
+							if light_type == "Point":
+								new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Point)
+								new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
+								new_node.GetComponentsWithAspect("Light")[0].SetShadowRange(float(get_nml_node_data(mlight.GetChild("ShadowRange"), 0.0)))
 
-						if light_type == "Parallel":
-							new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Linear)
+							if light_type == "Parallel":
+								new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Linear)
 
-						if light_type == "Spot":
-							new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Spot)
-							new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
-							new_node.GetComponentsWithAspect("Light")[0].SetConeAngle(float(get_nml_node_data(mlight.GetChild("ConeAngle"), 30.0)))
-							new_node.GetComponentsWithAspect("Light")[0].SetEdgeAngle(float(get_nml_node_data(mlight.GetChild("EdgeAngle"), 15.0)))
+							if light_type == "Spot":
+								new_node.GetComponentsWithAspect("Light")[0].SetModel(gs.Light.Model_Spot)
+								new_node.GetComponentsWithAspect("Light")[0].SetRange(light_range)
+								new_node.GetComponentsWithAspect("Light")[0].SetConeAngle(float(get_nml_node_data(mlight.GetChild("ConeAngle"), 30.0)))
+								new_node.GetComponentsWithAspect("Light")[0].SetEdgeAngle(float(get_nml_node_data(mlight.GetChild("EdgeAngle"), 15.0)))
 
-						new_node.GetComponentsWithAspect("Light")[0].SetClipDistance(float(get_nml_node_data(mlight.GetChild("ClipDistance"), 300.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetClipDistance(float(get_nml_node_data(mlight.GetChild("ClipDistance"), 300.0)))
 
-						new_node.GetComponentsWithAspect("Light")[0].SetDiffuseIntensity(float(get_nml_node_data(mlight.GetChild("DiffuseIntensity"), 1.0)))
-						new_node.GetComponentsWithAspect("Light")[0].SetSpecularIntensity(float(get_nml_node_data(mlight.GetChild("SpecularIntensity"), 0.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetDiffuseColor(diffuse_color)
+							new_node.GetComponentsWithAspect("Light")[0].SetSpecularColor(specular_color)
+							new_node.GetComponentsWithAspect("Light")[0].SetShadowColor(shadow_color)
 
-						new_node.GetComponentsWithAspect("Light")[0].SetZNear(float(get_nml_node_data(mlight.GetChild("ZNear"), 0.01)))
-						new_node.GetComponentsWithAspect("Light")[0].SetShadowBias(float(get_nml_node_data(mlight.GetChild("ShadowBias"), 0.01)))
+							new_node.GetComponentsWithAspect("Light")[0].SetDiffuseIntensity(float(get_nml_node_data(mlight.GetChild("DiffuseIntensity"), 1.0)))
+							new_node.GetComponentsWithAspect("Light")[0].SetSpecularIntensity(float(get_nml_node_data(mlight.GetChild("SpecularIntensity"), 0.0)))
+
+							new_node.GetComponentsWithAspect("Light")[0].SetZNear(float(get_nml_node_data(mlight.GetChild("ZNear"), 0.01)))
+							new_node.GetComponentsWithAspect("Light")[0].SetShadowBias(float(get_nml_node_data(mlight.GetChild("ShadowBias"), 0.01)))
 
 				for in_item in in_items:
 					#   Loads items with geometry
 					mobjects = in_item.GetChilds("MObject")
 					for mobject in mobjects:
 						mitem = mobject.GetChild("MItem")
-						object = mobject.GetChild("Object")
-						item = object.GetChild("Item")
+						if mitem is not None and mitem.GetChild("Active") is not None:
+							object = mobject.GetChild("Object")
+							item = object.GetChild("Item")
 
-						# get item name
-						id = mitem.GetChild("Id")
-						item_name = clean_nml_string(id.m_Data)
+							# get item name
+							id = mitem.GetChild("Id")
+							item_name = clean_nml_string(id.m_Data)
 
-						# get item geometry
-						geometry_filename = None
-						if object is not None:
-							geometry = object.GetChild("Geometry")
-							if geometry is not None:
-								geometry_filename = geometry.m_Data
-								geometry_filename = clean_nml_string(geometry_filename)
-								if geometry_filename.find("/") > -1:
-									geometry_filename = geometry_filename.split("/")[-1]
-								geometry_filename = geometry_filename.replace(".nmg", ".geo")
+							# get item geometry
+							geometry_filename = None
+							if object is not None:
+								geometry = object.GetChild("Geometry")
+								if geometry is not None:
+									geometry_filename = geometry.m_Data
+									geometry_filename = clean_nml_string(geometry_filename)
+									if geometry_filename.find("/") > -1:
+										geometry_filename = geometry_filename.split("/")[-1]
+									geometry_filename = geometry_filename.replace(".nmg", ".geo")
 
-						# transformation
-						position, rotation, scale, rotation_order = parse_transformation(item)
+							# transformation
+							position, rotation, scale, rotation_order = parse_transformation(item)
 
-						# print(item_name, geometry_filename, rotation_order)
+							# print(item_name, geometry_filename, rotation_order)
 
-						new_node = None
+							new_node = None
 
-						if geometry_filename is not None and geometry_filename != '':
-							new_node = scene.add_geometry(scn, os.path.join(folder_assets, geometry_filename))
+							if geometry_filename is not None and geometry_filename != '':
+								new_node = scene.add_geometry(scn, os.path.join(folder_assets, geometry_filename))
 
-						if new_node is not None:
-							new_node.SetName(item_name)
-							new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
-							new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
-							new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+							if new_node is not None:
+								new_node.SetName(item_name)
+								new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
+								new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
+								new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
 
 
 				env_global = gs.Environment()
