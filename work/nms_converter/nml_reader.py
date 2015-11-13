@@ -168,6 +168,35 @@ def parse_transformation(item):
 	return position, rotation, scale, rotation_order
 
 
+def parse_collision_shape_transformation(item):
+	rotation = item.GetChild("Rotation")
+
+	if rotation is None:
+		rotation = gs.Vector3()
+	else:
+		rotation = parse_nml_vector(rotation)
+
+	position = item.GetChild("Position")
+	if position is None:
+		position = gs.Vector3()
+	else:
+		position = parse_nml_vector(position)
+
+	scale = item.GetChild("Scale")
+	if scale is None:
+		scale = gs.Vector3(1, 1, 1)
+	else:
+		scale = parse_nml_vector(scale)
+
+	dimensions = item.GetChild("Dimensions")
+	if dimensions is None:
+		dimensions = gs.Vector3(1, 1, 1)
+	else:
+		dimensions = parse_nml_vector(dimensions)
+
+	return position, rotation, scale, dimensions
+
+
 def parse_light_color(light):
 	diffuse = light.GetChild("Diffuse")
 
@@ -231,9 +260,9 @@ def get_nml_node_data(node, default_value = None):
 	return clean_nml_string(node.m_Data)
 
 # Conversion routine
-# - Loads manually each relevant node from a NML file
+# - Load manually each relevant node from a NML file
 # - Recreate each node into the scene graph
-# - Saves the resulting scene into a new file (Json or XML)
+# - Save the resulting scene into a new file (Json or XML)
 
 root_in = "in"
 root_out = "out"
@@ -285,7 +314,7 @@ def convert_folder(folder_path):
 
 				# ----------- INSTANCES ----------------------
 				for in_item in in_items:
-					#   Loads instances
+					#   Load instances
 					instances = in_item.GetChilds("Instance")
 
 					for instance in instances:
@@ -322,7 +351,7 @@ def convert_folder(folder_path):
 
 				# ----------- CAMERAS ----------------------
 				for in_item in in_items:
-					#   Loads cameras
+					#   Load cameras
 					mcameras = in_item.GetChilds("MCamera")
 
 					for mcamera in mcameras:
@@ -355,7 +384,7 @@ def convert_folder(folder_path):
 
 				# ----------- LIGHT ----------------------
 				for in_item in in_items:
-					#   Loads lights
+					#   Load lights
 					mlights = in_item.GetChilds("MLight")
 
 					for mlight in mlights:
@@ -414,7 +443,7 @@ def convert_folder(folder_path):
 
 				# ----------- GEOMETRIES & NULL OBJECTS ----------------------
 				for in_item in in_items:
-					#   Loads items with geometry
+					#   Load items with geometry
 					mobjects = in_item.GetChilds("MObject")
 					for mobject in mobjects:
 						mitem = mobject.GetChild("MItem")
@@ -452,6 +481,62 @@ def convert_folder(folder_path):
 								new_node.GetComponentsWithAspect("Transform")[0].SetPosition(position)
 								new_node.GetComponentsWithAspect("Transform")[0].SetRotation(rotation)
 								new_node.GetComponentsWithAspect("Transform")[0].SetScale(scale)
+
+								# physics
+								physic_item = mitem.GetChild("PhysicItem")
+								if physic_item is not None:
+									physic_mode = get_nml_node_data(physic_item.GetChild("Mode"), "None")
+									if physic_mode != "None":
+										rigid_body = gs.MakeRigidBody()
+
+										linear_damping = 1.0 - float(get_nml_node_data(physic_item.GetChild("LinearDamping_v2"), 1.0))
+										angular_damping = 1.0 - float(get_nml_node_data(physic_item.GetChild("AngularDamping_v2"), 1.0))
+										rigid_body.SetLinearDamping(linear_damping)
+										rigid_body.SetAngularDamping(angular_damping)
+
+										physic_self_mask = int(get_nml_node_data(physic_item.GetChild("SelfMask"), 1))
+										physic_collision_mask = int(get_nml_node_data(physic_item.GetChild("Mask"), 1))
+
+										new_node.AddComponent(rigid_body)
+
+										# iterate on shapes
+										physic_root_shapes = physic_item.GetChild("Shapes")
+										if physic_root_shapes is not None:
+											physic_shapes = physic_root_shapes.GetChilds("GColShape")
+											if physic_shapes is not None:
+												for physic_shape in physic_shapes:
+													physic_shape_type = get_nml_node_data(physic_shape.GetChild("Type"), "Box")
+
+
+													col_type_dict = {'Box': gs.MakeBoxCollision(),
+													                 'Sphere': gs.MakeSphereCollision(),
+													                 'Capsule': gs.MakeCapsuleCollision(),
+													                 'Cylinder': gs.MakeCapsuleCollision(),
+													                 'Mesh': gs.MakeMeshCollision(),
+													                 'Convex': gs.MakeConvexCollision()}
+
+													if physic_shape_type in col_type_dict:
+														new_collision_shape = col_type_dict[physic_shape_type]
+													else:
+														new_collision_shape = gs.MakeBoxCollision()
+
+													new_collision_shape.SetMass(float(get_nml_node_data(physic_shape.GetChild("Mass"), 1.0)))
+													new_collision_shape.SetSelfMask(physic_self_mask)
+													new_collision_shape.SetCollisionMask(physic_collision_mask)
+
+													position, rotation, scale, dimensions = parse_collision_shape_transformation(physic_shape)
+
+													# new_collision_shape.SetMatrix()
+
+													if physic_shape_type == 'Box':
+														new_collision_shape.SetDimensions(dimensions)
+													elif physic_shape_type == 'Sphere':
+														new_collision_shape.SetRadius(dimensions.x)
+													elif physic_shape_type == 'Capsule' or physic_shape_type == 'Cylinder':
+														new_collision_shape.SetRadius(dimensions.x)
+														new_collision_shape.SetLength(dimensions.y)
+
+													new_node.AddComponent(new_collision_shape)
 
 								uid_dict[str(uid)] = new_node
 
