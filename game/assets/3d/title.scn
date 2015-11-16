@@ -1,0 +1,382 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				}
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "Guard",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.9442,
+							"y": -2.0699,
+							"z": 2.9242000000000005
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -3.1415,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.425,
+							"y": 1.425,
+							"z": 1.425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/guard.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "camera_render",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.40940000000000006,
+							"y": 1.1,
+							"z": 14.6963
+						},
+						"Rotation": {
+							"x": 0.0747,
+							"y": -3.1137,
+							"z": 0.0
+						}
+					},
+					"gs::core::Camera": {
+						"ZoomFactor": 2.5,
+						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "spot",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.4228000000000009,
+							"y": 7.2796,
+							"z": 10.2809
+						},
+						"Rotation": {
+							"x": 0.48960000000000006,
+							"y": -2.7227,
+							"z": 0.0
+						}
+					},
+					"gs::core::Light": {
+						"Model": "Spot",
+						"Shadow": "ShadowMap",
+						"ZNear": 0.02,
+						"ClipDistance": 300.0,
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 1.0,
+							"b": 1.0
+						},
+						"SpecularIntensity": 1.0,
+						"ConeAngle": 0.0175,
+						"EdgeAngle": 0.4364
+					}
+				}
+			},
+			"Node": {
+				"Uid": 4,
+				"Name": "red_flash_light",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.36200000000000007,
+							"y": -1.1358000000000002,
+							"z": 1.2163000000000002
+						}
+					},
+					"gs::core::Light": {
+						"Shadow": "ShadowMap",
+						"ZNear": 0.02,
+						"Range": 10.0,
+						"ClipDistance": 300.0,
+						"DiffuseColor": {
+							"r": 1.0,
+							"g": 0.9373,
+							"b": 0.8118000000000001
+						},
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 0.9687,
+							"b": 0.7961
+						},
+						"SpecularIntensity": 1.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 5,
+				"Name": "rim_light",
+				"Components": {
+					"gs::core::Transform": {
+						"Rotation": {
+							"x": 0.0131,
+							"y": 0.4451,
+							"z": -0.0
+						}
+					},
+					"gs::core::Light": {
+						"Model": "Linear",
+						"Shadow": "ShadowMap",
+						"ZNear": 0.02,
+						"ClipDistance": 300.0,
+						"DiffuseColor": {
+							"r": 1.0,
+							"g": 0.8001,
+							"b": 0.0
+						},
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 0.7020000000000001,
+							"b": 0.0
+						},
+						"SpecularIntensity": 1.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 6,
+				"Name": "New Light",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.0809,
+							"y": -3.2924,
+							"z": 4.3832
+						}
+					},
+					"gs::core::Light": {
+						"Shadow": "ShadowMap",
+						"ZNear": 0.02,
+						"Range": 6.0,
+						"ClipDistance": 300.0,
+						"DiffuseColor": {
+							"r": 1.0,
+							"g": 0.33340000000000005,
+							"b": 0.0
+						},
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 0.6667000000000001,
+							"b": 0.0
+						},
+						"DiffuseIntensity": 0.5,
+						"SpecularIntensity": 1.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 7,
+				"Name": "ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Rotation": {
+							"x": 1.5708,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 8,
+				"Name": "Medieval Title",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.7680000000000004,
+							"y": 5.449,
+							"z": 7.25
+						},
+						"Rotation": {
+							"x": 0.0,
+							"y": -3.1415,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 0.1404,
+							"y": 0.1408,
+							"z": 0.1258
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/title_mesh.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 9,
+				"Name": "light_handler",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": ""
+					}
+				}
+			},
+			"Node": {
+				"Uid": 10,
+				"Name": "Cylinder03",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0157000000000004,
+							"y": -4.1881,
+							"z": 2.5317000000000005
+						},
+						"Scale": {
+							"x": 2.6584000000000005,
+							"y": 1.7082000000000002,
+							"z": 2.6584000000000005
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Cylinder03.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 11,
+				"Name": "Box01",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.202,
+							"y": -3.3849,
+							"z": 2.8199
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Box01.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 12,
+				"Name": "Line01",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.284800000000001,
+							"y": -4.6122000000000009,
+							"z": 1.9382000000000002
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Line01.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 13,
+				"Name": "Line01",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.1459,
+							"y": -4.1247,
+							"z": 1.9382000000000002
+						},
+						"Rotation": {
+							"x": 0.0027,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Line01.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 14,
+				"Name": "Medieval Title",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0262,
+							"y": 1.4077000000000002,
+							"z": 5.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 3.1416,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 0.31770000000000006,
+							"y": 0.3185,
+							"z": 0.1258
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/title_mesh.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 15,
+				"Name": "mediecross_subtitle",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.3741000000000005,
+							"y": 0.455,
+							"z": 4.975700000000001
+						},
+						"Scale": {
+							"x": 0.1501,
+							"y": 0.1501,
+							"z": 0.1501
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/mediecross_subtitle.geo"
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {
+			"Link": {
+				"Node": 3,
+				"Parent": 9
+			}
+		},
+		"Skeletons": {},
+		"State": {
+			"CurrentCamera": {
+				"Uid": 2
+			}
+		}
+	}
+}

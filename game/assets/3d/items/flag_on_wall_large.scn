@@ -1,0 +1,115 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"FogNear": 10.0,
+				"FogFar": 50.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "Flag",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.038700000000000008,
+							"y": -0.0839,
+							"z": 0.0322
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.9000000000000002,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/flag.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Metal Pole",
+				"Components": {
+					"gs::core::Transform": {
+						"Rotation": {
+							"x": 0.0,
+							"y": 1.5708,
+							"z": 1.5708
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Box05",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.003,
+							"y": -0.4918,
+							"z": -2.099
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 1.0,
+							"z": 0.7563000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Box05.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 4,
+				"Name": "Box05",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.003,
+							"y": -0.4918,
+							"z": 2.0861
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 1.0,
+							"z": 0.7563000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Box05.geo"
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {},
+		"Skeletons": {},
+		"State": {}
+	}
+}

@@ -1,0 +1,205 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"FogNear": 10.0,
+				"FogFar": 500.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -9.3816,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 9.2791,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Pillar",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.5441,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 4,
+				"Name": "Pillar",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.646600000000002,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 5,
+				"Name": "Metal Pole",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 5.5025,
+							"z": 0.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": 1.5708
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 3.1894,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 6,
+				"Name": "Flag",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.285900000000001,
+							"y": 5.431900000000001,
+							"z": 0.0292
+						},
+						"Scale": {
+							"x": 0.795,
+							"y": 0.795,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/flag.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 7,
+				"Name": "Flag",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.318300000000001,
+							"y": 5.4526,
+							"z": 0.0292
+						},
+						"Scale": {
+							"x": 0.795,
+							"y": 0.795,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/flag.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 8,
+				"Name": "Metal Pole",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 7.593800000000001,
+							"y": 2.7371000000000005,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 1.1159000000000002,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 9,
+				"Name": "Metal Pole",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -7.6587000000000009,
+							"y": 2.7371000000000005,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 1.1159000000000002,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole.geo"
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {},
+		"Skeletons": {},
+		"State": {}
+	}
+}

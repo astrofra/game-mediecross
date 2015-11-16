@@ -1,0 +1,91 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"FogNear": 10.0,
+				"FogFar": 50.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "Food_mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Scale": {
+							"x": 0.5,
+							"y": 0.5,
+							"z": 0.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/food_empty_0.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Food",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": ""
+					},
+					"gs::core::RigidBody": {
+						"Activate": true,
+						"LinearFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"AngularFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Gravity": {
+							"x": 0.0,
+							"y": -9.81,
+							"z": 0.0
+						}
+					},
+					"gs::core::BoxCollision": {
+						"gs::core::Collision": {
+							"SelfMask": 0,
+							"CollisionMask": 0
+						},
+						"Dimensions": {
+							"x": 0.5,
+							"y": 0.5,
+							"z": 3.0
+						}
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {
+			"Link": {
+				"Node": 1,
+				"Parent": 2
+			}
+		},
+		"Skeletons": {},
+		"State": {}
+	}
+}

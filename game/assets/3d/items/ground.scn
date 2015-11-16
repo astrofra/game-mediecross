@@ -1,0 +1,245 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"FogNear": 10.0,
+				"FogFar": 50.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 20.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": -20.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 4,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 20.0,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 5,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.0,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 6,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 20.0,
+							"y": 0.0,
+							"z": 20.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 7,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 20.0,
+							"y": 0.0,
+							"z": -20.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 8,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.0,
+							"y": 0.0,
+							"z": -20.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 9,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.0,
+							"y": 0.0,
+							"z": 20.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 10,
+				"Name": "ground",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": ""
+					},
+					"gs::core::RigidBody": {
+						"Activate": true,
+						"LinearFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"AngularFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Gravity": {
+							"x": 0.0,
+							"y": -9.81,
+							"z": 0.0
+						}
+					},
+					"gs::core::BoxCollision": {
+						"gs::core::Collision": {
+							"SelfMask": 0,
+							"CollisionMask": 0
+						},
+						"Dimensions": {
+							"x": 60.0,
+							"y": 10.0,
+							"z": 60.0
+						}
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {
+			"Link": {
+				"Node": 1,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 2,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 3,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 4,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 5,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 6,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 7,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 8,
+				"Parent": 10
+			},
+			"Link": {
+				"Node": 9,
+				"Parent": 10
+			}
+		},
+		"Skeletons": {},
+		"State": {}
+	}
+}

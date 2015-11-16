@@ -1,0 +1,80 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"FogNear": 10.0,
+				"FogFar": 50.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Rotation": {
+							"x": 0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/barrel.geo"
+					},
+					"gs::core::RigidBody": {
+						"Activate": true,
+						"LinearFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"AngularFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Gravity": {
+							"x": 0.0,
+							"y": -9.81,
+							"z": 0.0
+						}
+					},
+					"gs::core::SphereCollision": {
+						"gs::core::Collision": {
+							"Mass": 6.0,
+							"SelfMask": 0,
+							"CollisionMask": 0
+						},
+						"Radius": 0.9
+					},
+					"gs::core::CapsuleCollision": {
+						"gs::core::Collision": {
+							"SelfMask": 0,
+							"CollisionMask": 0
+						},
+						"Radius": 1.6001
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {},
+		"Skeletons": {},
+		"State": {}
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"FogColor": {
+					"r": 1.0,
+					"g": 1.0,
+					"b": 1.0
+				}
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "tile_slow",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": ""
+					},
+					"gs::core::RigidBody": {
+						"Activate": true,
+						"LinearFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"AngularFactor": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Gravity": {
+							"x": 0.0,
+							"y": -9.81,
+							"z": 0.0
+						}
+					},
+					"gs::core::BoxCollision": {
+						"gs::core::Collision": {
+							"SelfMask": 0,
+							"CollisionMask": 0
+						},
+						"Dimensions": {
+							"x": 3.0,
+							"y": 1.0,
+							"z": 3.0
+						}
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {
+						"Rotation": {
+							"x": -1.5707,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/tile_bumped_low.geo"
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {
+			"Link": {
+				"Node": 2,
+				"Parent": 1
+			}
+		},
+		"Skeletons": {},
+		"State": {}
+	}
+}

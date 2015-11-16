@@ -1,0 +1,152 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"FogNear": 10.0,
+				"FogFar": 50.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "Ball Green",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.153,
+							"y": -0.0,
+							"z": -1.6858000000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ball_green.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Ball Green",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.6027,
+							"y": -0.0,
+							"z": -0.049100000000000008
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ball_green.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Ball Green",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.33640000000000006,
+							"y": -0.0,
+							"z": 1.6369
+						},
+						"Scale": {
+							"x": 1.5,
+							"y": 1.5,
+							"z": 1.5
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ball_green.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 4,
+				"Name": "Ball Green",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.8625000000000004,
+							"y": -0.0,
+							"z": -2.0746
+						},
+						"Scale": {
+							"x": 0.8001,
+							"y": 0.8001,
+							"z": 0.8001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ball_green.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 5,
+				"Name": "Ball Green",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.6831,
+							"y": 0.0001,
+							"z": -4.1154
+						},
+						"Scale": {
+							"x": 0.7000000000000001,
+							"y": 0.7000000000000001,
+							"z": 0.7000000000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ball_green.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 6,
+				"Name": "Ball Green",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 1.0744,
+							"y": -0.0,
+							"z": 0.597
+						},
+						"Scale": {
+							"x": 0.8001,
+							"y": 0.8001,
+							"z": 0.8001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ball_green.scn"
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {},
+		"Skeletons": {},
+		"State": {}
+	}
+}

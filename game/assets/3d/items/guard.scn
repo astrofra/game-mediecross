@@ -1,0 +1,92 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"AmbientColor": {
+					"r": 0.7569,
+					"g": 0.44320000000000006,
+					"b": 0.5099
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5412,
+					"g": 0.4706,
+					"b": 0.502
+				},
+				"FogNear": 10.0,
+				"FogFar": 50.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "guard",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Cylinder02.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Box03",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.6521,
+							"y": 0.0526,
+							"z": -0.44370000000000006
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Box03.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Box04",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.6035,
+							"y": 0.129,
+							"z": -0.46040000000000005
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Box04.geo"
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {
+			"Link": {
+				"Node": 2,
+				"Parent": 1
+			},
+			"Link": {
+				"Node": 3,
+				"Parent": 1
+			}
+		},
+		"Skeletons": {},
+		"State": {}
+	}
+}

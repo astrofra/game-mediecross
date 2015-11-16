@@ -1,0 +1,8538 @@
+{
+	"Scene": {
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.5373,
+					"g": 0.2902,
+					"b": 0.3765
+				},
+				"AmbientColor": {
+					"r": 0.9412,
+					"g": 0.37260000000000006,
+					"b": 0.3804
+				},
+				"AmbientIntensity": 0.25,
+				"FogColor": {
+					"r": 0.5373,
+					"g": 0.1726,
+					"b": 0.17650000000000003
+				},
+				"FogNear": 25.0,
+				"FogFar": 100.0
+			}
+		},
+		"Nodes": {
+			"Node": {
+				"Uid": 1,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 8.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 4,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Rotation": {
+							"x": 0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 5,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 8.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 6,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 16.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 7,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 16.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 8,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 60.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 9,
+				"Name": "knight",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.09770000000000001,
+							"y": -0.0,
+							"z": -1.8997000000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/knight_controller.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 10,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 24.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 11,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 24.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 12,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 120.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 13,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 32.068400000000007
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 14,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 32.068400000000007
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 15,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 48.068400000000007
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 16,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 48.068400000000007
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 17,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 56.068400000000007
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 18,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 56.068400000000007
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 19,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 64.16120000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 20,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 64.16120000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 21,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 80.2296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 22,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 80.2296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 23,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 88.2296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 24,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 88.2296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 25,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 96.2296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 26,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 96.2296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 27,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 104.2296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 28,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 180.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 29,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 240.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 30,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 300.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 31,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 360.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 32,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 104.12960000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 33,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 120.12960000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 34,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 120.0296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 35,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 128.02960000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 36,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 127.92960000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 37,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 135.9296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 38,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 135.9296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 39,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 151.8296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 40,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 151.7296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 41,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 159.7296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 42,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 159.7296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 43,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 167.7296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 44,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 167.7296
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 45,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 175.52960000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 46,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 175.42960000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 47,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 40.100100000000008
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 48,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 40.100100000000008
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 49,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 72.1001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 50,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 72.1001
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 51,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 112.10010000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 52,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 112.10010000000001
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 53,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 143.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 54,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 143.9001
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 55,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 183.5001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 56,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 183.5001
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 57,
+				"Name": "Gate",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": -0.001,
+							"z": 300.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/gate.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 58,
+				"Name": "Flag On Wall",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -40.5278,
+							"y": 6.3114,
+							"z": 22.875
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/flag_on_wall.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 59,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 191.4104
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 60,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 191.31040000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 61,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 199.31040000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 62,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 199.31040000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 63,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 207.31040000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 64,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 207.31040000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 65,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 215.1104
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 66,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 215.0104
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 67,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 223.0808
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 68,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 223.0808
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 69,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 231.211
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 70,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 231.11100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 71,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 239.11100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 72,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 239.11100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 73,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 247.11100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 74,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 247.11100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 75,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 254.911
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 76,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 254.811
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 77,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 262.8815
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 78,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 262.8815
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 79,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 270.5951
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 80,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 270.49510000000006
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 81,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 278.49510000000006
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 82,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 278.49510000000006
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 83,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 286.49510000000006
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 84,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 286.49510000000006
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 85,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 294.2951
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 86,
+				"Name": "Cube",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 294.1951
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/cube.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 87,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.5411,
+							"y": 2.4266,
+							"z": 300.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 88,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.632,
+							"y": 2.4346,
+							"z": 299.9885
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 89,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -60.0,
+							"y": 0.0,
+							"z": 240.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 90,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -60.0,
+							"y": 0.0,
+							"z": 300.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 91,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 309.4494
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 92,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 309.4494
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 93,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 320.2206
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 94,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 320.2206
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 95,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": 0.0,
+							"z": 330.3021
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 96,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": 0.0,
+							"z": 330.3021
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 97,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.1754,
+							"y": -2.2218,
+							"z": 330.3021
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 98,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": -2.3155,
+							"z": 314.6803
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 99,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": -2.3155,
+							"z": 314.6803
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 100,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": -2.3155,
+							"z": 304.7568
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 101,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": -2.3155,
+							"z": 304.7568
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 102,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 8.0,
+							"y": -2.3155,
+							"z": 326.2869
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 103,
+				"Name": "Column",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -8.0,
+							"y": -2.3155,
+							"z": 326.2869
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/column.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 104,
+				"Name": "Tree Conic 0",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -13.2568,
+							"y": -0.0,
+							"z": 19.759600000000004
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_0.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 105,
+				"Name": "Tree Conic 1",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.4866,
+							"y": 0.0001,
+							"z": -6.523000000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_1.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 106,
+				"Name": "Tree Conic 1",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.342300000000002,
+							"y": 0.0,
+							"z": 33.6469
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_1.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 107,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -60.0,
+							"y": 0.0,
+							"z": 0.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 108,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -60.0,
+							"y": 0.0,
+							"z": 60.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 109,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -60.0,
+							"y": 0.0,
+							"z": 120.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 110,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -60.0,
+							"y": 0.0,
+							"z": 180.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 111,
+				"Name": "Tree Conic 0",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.4582,
+							"y": -0.0,
+							"z": -13.0264
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_0.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 112,
+				"Name": "Tree Conic 0",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -12.7238,
+							"y": -0.0,
+							"z": -20.6889
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_0.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 113,
+				"Name": "Tree Conic 1",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 9.379100000000001,
+							"y": -0.0,
+							"z": -19.4585
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_1.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 114,
+				"Name": "Guard",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -12.4503,
+							"y": 0.0,
+							"z": 274.958
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -1.5707,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.25,
+							"y": 1.25,
+							"z": 1.25
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/guard.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 115,
+				"Name": "Guard",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -12.4503,
+							"y": 0.0,
+							"z": 282.458
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -1.5707,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.25,
+							"y": 1.25,
+							"z": 1.25
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/guard.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 116,
+				"Name": "Tree Conic 1",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -31.072400000000003,
+							"y": -0.0,
+							"z": 313.5186
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_1.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 117,
+				"Name": "Tree Conic 0",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0675,
+							"y": -0.0,
+							"z": 293.3883
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_0.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 118,
+				"Name": "Tree Conic 0",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -34.316500000000008,
+							"y": -0.0,
+							"z": 300.34340000000005
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_0.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 119,
+				"Name": "Tree Conic 1",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -26.029400000000004,
+							"y": -0.0,
+							"z": 292.2436
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_1.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 120,
+				"Name": "Tree Conic 0",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -35.2434,
+							"y": -0.0,
+							"z": 267.9365
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_0.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 121,
+				"Name": "Tree Conic 1",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -43.861200000000007,
+							"y": -0.0,
+							"z": 256.0557
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tree_conic_red_1.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 122,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.3001000000000009,
+							"y": 0.10010000000000001,
+							"z": 24.900100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 123,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.6999,
+							"y": 0.10010000000000001,
+							"z": 24.900100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 124,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 1.3,
+							"y": 0.10010000000000001,
+							"z": 27.900100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 125,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.3001000000000009,
+							"y": 0.10010000000000001,
+							"z": 27.900100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 126,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.6999,
+							"y": 0.10010000000000001,
+							"z": 27.900100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 127,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -1.7000000000000002,
+							"y": 0.10010000000000001,
+							"z": 27.900100000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 128,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 1.3,
+							"y": 0.10010000000000001,
+							"z": 38.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 129,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.3001000000000009,
+							"y": 0.10010000000000001,
+							"z": 38.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 130,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.6999,
+							"y": 0.10010000000000001,
+							"z": 38.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 131,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -1.7000000000000002,
+							"y": 0.10010000000000001,
+							"z": 38.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 132,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.3001000000000009,
+							"y": 0.10010000000000001,
+							"z": 46.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 133,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.6999,
+							"y": 0.10010000000000001,
+							"z": 46.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 134,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 1.3,
+							"y": 0.10010000000000001,
+							"z": 49.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 135,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -1.7000000000000002,
+							"y": 0.10010000000000001,
+							"z": 49.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 136,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.3001000000000009,
+							"y": 0.10010000000000001,
+							"z": 52.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 137,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.6999,
+							"y": 0.10010000000000001,
+							"z": 52.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 138,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 1.3,
+							"y": 0.10010000000000001,
+							"z": 55.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 139,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -1.7000000000000002,
+							"y": 0.10010000000000001,
+							"z": 55.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 140,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.3001000000000009,
+							"y": 0.10010000000000001,
+							"z": 58.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 141,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.6999,
+							"y": 0.10010000000000001,
+							"z": 58.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 142,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 1.3,
+							"y": 0.10010000000000001,
+							"z": 61.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 143,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -1.7000000000000002,
+							"y": 0.10010000000000001,
+							"z": 61.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 144,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.7,
+							"y": 0.10010000000000001,
+							"z": 89.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 145,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.7001,
+							"y": 0.10010000000000001,
+							"z": 92.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 146,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.7001,
+							"y": 0.10010000000000001,
+							"z": 95.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 147,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.7,
+							"y": 0.10010000000000001,
+							"z": 98.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 148,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.4,
+							"y": 0.10010000000000001,
+							"z": 98.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 149,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.4,
+							"y": 0.10010000000000001,
+							"z": 107.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 150,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.4,
+							"y": 0.10010000000000001,
+							"z": 101.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 151,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.4,
+							"y": 0.10010000000000001,
+							"z": 104.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 152,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 107.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 153,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 110.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 154,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 113.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 155,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 116.2001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 156,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.4,
+							"y": 0.10010000000000001,
+							"z": 115.10010000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 157,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.4,
+							"y": 0.10010000000000001,
+							"z": 124.10010000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 158,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.4,
+							"y": 0.10010000000000001,
+							"z": 118.10010000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 159,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.4,
+							"y": 0.10010000000000001,
+							"z": 121.10010000000001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 160,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 152.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 161,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.0,
+							"y": 0.10010000000000001,
+							"z": 152.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 162,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 155.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 163,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 155.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 164,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.2,
+							"y": 0.10010000000000001,
+							"z": 166.6001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 165,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.8000000000000004,
+							"y": 0.10010000000000001,
+							"z": 166.6001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 166,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.8000000000000004,
+							"y": 0.10010000000000001,
+							"z": 169.6001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 167,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.8001000000000009,
+							"y": 0.10010000000000001,
+							"z": 169.6001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 168,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.9,
+							"y": 0.10010000000000001,
+							"z": 174.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 169,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.9000000000000005,
+							"y": 0.10010000000000001,
+							"z": 174.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 170,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.9000000000000005,
+							"y": 0.10010000000000001,
+							"z": 177.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 171,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.10010000000000001,
+							"y": 0.10010000000000001,
+							"z": 177.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 172,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 149.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 173,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.0,
+							"y": 0.10010000000000001,
+							"z": 149.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 174,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 158.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 175,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 158.9001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 176,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 249.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 177,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 246.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 178,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.0,
+							"y": 0.10010000000000001,
+							"z": 249.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 179,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 246.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 180,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 249.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 181,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 255.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 182,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 252.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 183,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.0,
+							"y": 0.10010000000000001,
+							"z": 255.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 184,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 252.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 185,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 255.70000000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 186,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.0,
+							"y": 0.10010000000000001,
+							"z": 261.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 187,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 258.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 188,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 261.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 189,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.0,
+							"y": 0.10010000000000001,
+							"z": 267.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 190,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 267.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 191,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 273.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 192,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 273.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 193,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 279.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 194,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.0,
+							"y": 0.10010000000000001,
+							"z": 279.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 195,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 279.7001
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 196,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 282.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 197,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.0,
+							"y": 0.10010000000000001,
+							"z": 285.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 198,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 282.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 199,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.10010000000000001,
+							"z": 285.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 200,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 288.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 201,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 288.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 202,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 297.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 203,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 294.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 204,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 294.7
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 205,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 233.30010000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 206,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 230.30010000000002
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 207,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 219.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 208,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.10010000000000001,
+							"z": 216.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 209,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -3.0,
+							"y": 0.10010000000000001,
+							"z": 216.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 210,
+				"Name": "Tile",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.10010000000000001,
+							"z": 213.0
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/tile.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 211,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.25120000000000006,
+							"y": 0.0,
+							"z": 13.5957
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 212,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.3488,
+							"y": 0.0,
+							"z": 54.895700000000008
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 213,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.7512,
+							"y": 0.0,
+							"z": 54.895700000000008
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 214,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.0512,
+							"y": 0.0,
+							"z": 73.2957
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 215,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.2512,
+							"y": 0.0,
+							"z": 137.4957
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 216,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.2512,
+							"y": 0.0,
+							"z": 200.8957
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 217,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.4488,
+							"y": 0.0,
+							"z": 222.9957
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 218,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.0,
+							"y": 0.0,
+							"z": 246.223
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 219,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.0,
+							"y": 0.0,
+							"z": 259.0231
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 220,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.9,
+							"y": 0.0,
+							"z": 274.123
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 221,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.10010000000000001,
+							"y": 0.0,
+							"z": 286.023
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 222,
+				"Name": "Slope",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.7512000000000005,
+							"y": 0.0,
+							"z": 236.69570000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/slope.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 223,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.2225,
+							"y": 0.9,
+							"z": 104.6425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 224,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.3225000000000004,
+							"y": 0.9,
+							"z": 116.0424
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 225,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.2225,
+							"y": 0.9,
+							"z": 124.2425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 226,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3225,
+							"y": 0.9,
+							"z": 131.6425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 227,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.9225,
+							"y": 0.9,
+							"z": 136.3425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 228,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 4.4225,
+							"y": 0.9,
+							"z": 73.3424
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 229,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.8775,
+							"y": 0.9,
+							"z": 73.3424
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 230,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3225,
+							"y": 0.9,
+							"z": 162.2425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 231,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.2225,
+							"y": 0.9,
+							"z": 164.3425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 232,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.8775,
+							"y": 0.9,
+							"z": 159.9425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 233,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.8775,
+							"y": 0.9,
+							"z": 157.54250000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 234,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.2225,
+							"y": 0.9,
+							"z": 174.7425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 235,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.9225,
+							"y": 0.9,
+							"z": 177.3425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 236,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.8775,
+							"y": 0.9,
+							"z": 170.3425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 237,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.8775,
+							"y": 0.9,
+							"z": 167.9425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 238,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3225,
+							"y": 0.9,
+							"z": 183.7425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 239,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.2225,
+							"y": 0.9,
+							"z": 185.8425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 240,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.9225,
+							"y": 0.9,
+							"z": 188.4425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 241,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -2.8775,
+							"y": 0.9,
+							"z": 181.4425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 242,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3225,
+							"y": 0.9,
+							"z": 230.1425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 243,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3225,
+							"y": 0.9,
+							"z": 276.34250000000005
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 244,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 6.2225,
+							"y": 0.9,
+							"z": 268.0425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 245,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.6775,
+							"y": 0.9,
+							"z": 270.64250000000006
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 246,
+				"Name": "Barrel",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3225,
+							"y": 0.9,
+							"z": 282.5425
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/barrel.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 247,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -110.92240000000001,
+							"y": 20.900000000000003,
+							"z": 240.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.7853
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 248,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -110.92240000000001,
+							"y": 20.900000000000003,
+							"z": 300.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.7853
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 249,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -110.92240000000001,
+							"y": 20.900000000000003,
+							"z": 0.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.7853
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 250,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -110.92240000000001,
+							"y": 20.900000000000003,
+							"z": 60.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.7853
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 251,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -110.92240000000001,
+							"y": 20.900000000000003,
+							"z": 120.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.7853
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 252,
+				"Name": "Ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -110.92240000000001,
+							"y": 20.900000000000003,
+							"z": 180.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.7853
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/ground.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 253,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.6723,
+							"y": 0.7003,
+							"z": 49.0206
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 254,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.1952,
+							"y": 0.5337000000000001,
+							"z": 78.5211
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 255,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.0296,
+							"y": 0.8256,
+							"z": 110.9428
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 256,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.2099,
+							"y": 0.6177,
+							"z": 128.76770000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 257,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -6.2361,
+							"y": 0.7839,
+							"z": 162.0149
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 258,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.2475000000000009,
+							"y": 0.6576000000000001,
+							"z": 179.987
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 259,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.1258,
+							"y": 0.6576000000000001,
+							"z": 215.99280000000003
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 260,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -5.7801,
+							"y": 0.6203000000000001,
+							"z": 264.7346
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 261,
+				"Name": "Food Full",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.1487,
+							"y": 0.6532,
+							"z": 297.718
+						}
+					},
+					"gs::core::Instance": {
+						"Path": "assets/3d/items/food_full.scn"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 262,
+				"Name": "render_camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 23.55,
+							"y": 9.037600000000002,
+							"z": -0.5627
+						},
+						"Rotation": {
+							"x": 0.29460000000000005,
+							"y": -1.2444,
+							"z": 0.0
+						}
+					},
+					"gs::core::Camera": {
+						"ZoomFactor": 2.5,
+						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 263,
+				"Name": "lofi_camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 23.55,
+							"y": 9.037600000000002,
+							"z": -0.5627
+						},
+						"Rotation": {
+							"x": 0.29460000000000005,
+							"y": -1.2444,
+							"z": 0.0
+						}
+					},
+					"gs::core::Camera": {
+						"ZoomFactor": 2.5,
+						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 264,
+				"Name": "main_light",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 2.6206,
+							"z": 4.1162
+						},
+						"Rotation": {
+							"x": 0.24350000000000003,
+							"y": 2.584,
+							"z": 0.0
+						}
+					},
+					"gs::core::Light": {
+						"Model": "Linear",
+						"Shadow": "ShadowMap",
+						"ShadowRange": 110.0,
+						"ZNear": 0.02,
+						"ClipDistance": 300.0,
+						"DiffuseColor": {
+							"r": 1.0,
+							"g": 0.7608,
+							"b": 0.7373000000000001
+						},
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 0.4667,
+							"b": 0.0
+						},
+						"DiffuseIntensity": 1.25,
+						"SpecularIntensity": 2.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 265,
+				"Name": "rim_light",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.0,
+							"y": 2.6206,
+							"z": 4.1162
+						},
+						"Rotation": {
+							"x": -0.14750000000000003,
+							"y": -0.050100000000000009,
+							"z": -0.2086
+						}
+					},
+					"gs::core::Light": {
+						"Model": "Linear",
+						"Shadow": "ShadowMap",
+						"ShadowRange": 500.0,
+						"ZNear": 0.02,
+						"ClipDistance": 300.0,
+						"DiffuseColor": {
+							"r": 1.0,
+							"g": 0.3961,
+							"b": 0.1177
+						},
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 0.5059,
+							"b": 0.5059
+						},
+						"SpecularIntensity": 1.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 266,
+				"Name": "New Dummy",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": ""
+					}
+				}
+			},
+			"Node": {
+				"Uid": 267,
+				"Name": "light_rig",
+				"Components": {
+					"gs::core::Transform": {
+						"Rotation": {
+							"x": 0.1532,
+							"y": 1.0107000000000002,
+							"z": -0.031
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": ""
+					}
+				}
+			},
+			"Node": {
+				"Uid": 268,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -12.0,
+							"y": 6.0,
+							"z": 0.0
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 269,
+				"Name": "door",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -11.681600000000002,
+							"y": 0.0,
+							"z": 0.31320000000000006
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -1.5707,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/door.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 270,
+				"Name": "vignette",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 1.0
+						},
+						"Rotation": {
+							"x": 1.5708,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 0.12000000000000001,
+							"y": 1.0,
+							"z": 0.10010000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/vignette.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 271,
+				"Name": "player_follower",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": ""
+					}
+				}
+			},
+			"Node": {
+				"Uid": 272,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -11.9708,
+							"y": 0.0001,
+							"z": 6.6888000000000009
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 273,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -36.5504,
+							"y": -0.8049000000000001,
+							"z": 11.1814
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 274,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 16.4248
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 275,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.2697,
+							"y": 2.9834,
+							"z": 22.840300000000004
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 1.3501,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 276,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 29.3972
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 277,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.2697,
+							"y": -1.6649,
+							"z": 36.0053
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 278,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 42.6601
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 279,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -36.5504,
+							"y": -0.15660000000000003,
+							"z": 47.8423
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -0.7853,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 280,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -31.938000000000004,
+							"y": -4.5178,
+							"z": 52.606300000000008
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 281,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -31.967200000000003,
+							"y": -3.555,
+							"z": 59.3299
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 282,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -31.938000000000004,
+							"y": -4.5178,
+							"z": 65.393
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 283,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -36.5504,
+							"y": -0.8831,
+							"z": 69.88550000000001
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 284,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 75.1289
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 285,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.2697,
+							"y": 1.4821,
+							"z": 81.54440000000001
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 286,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 88.1014
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 287,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.2697,
+							"y": -4.0153,
+							"z": 94.7094
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 288,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 101.36420000000001
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 289,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -36.5504,
+							"y": -0.21930000000000003,
+							"z": 106.54650000000001
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -0.7853,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 290,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -31.938000000000004,
+							"y": -4.5178,
+							"z": 111.5017
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 291,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -31.967200000000003,
+							"y": 2.5034,
+							"z": 118.2253
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 1.25,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 292,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -31.938000000000004,
+							"y": -4.5178,
+							"z": 124.28840000000001
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 293,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -36.5504,
+							"y": -1.5873000000000002,
+							"z": 128.7809
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 294,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 134.0243
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 295,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.2697,
+							"y": 1.4821,
+							"z": 140.43980000000003
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 296,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 146.9968
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 297,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.2697,
+							"y": -1.7074,
+							"z": 153.6048
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 298,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -41.0589,
+							"y": -4.5178,
+							"z": 160.2597
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 299,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.302400000000003,
+							"y": 6.0,
+							"z": -22.2106
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 300,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.0917,
+							"y": 0.0001,
+							"z": -15.555800000000002
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 301,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.5832,
+							"y": 3.64,
+							"z": -10.3736
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -0.7853,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 302,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -11.9708,
+							"y": 0.0001,
+							"z": -5.6096
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 303,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -45.323100000000007,
+							"y": -0.8742000000000001,
+							"z": 164.7062
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 0.7854,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 304,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -49.8316,
+							"y": -4.5178,
+							"z": 169.9497
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 305,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -50.042300000000007,
+							"y": 1.4821,
+							"z": 176.36520000000002
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 306,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -49.8316,
+							"y": -4.5178,
+							"z": 182.9221
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 307,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -50.042300000000007,
+							"y": -3.5266,
+							"z": 189.5302
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 308,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.6688,
+							"y": 2.9585000000000005,
+							"z": 6.688700000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 309,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -30.6172,
+							"y": 2.9585000000000005,
+							"z": 6.688700000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 310,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.6556,
+							"y": 0.0001,
+							"z": 6.6888000000000009
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 311,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -33.069700000000008,
+							"y": -2.2649,
+							"z": 28.805300000000004
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 312,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -22.3697,
+							"y": -4.064900000000001,
+							"z": 63.7053
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 313,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -30.469700000000004,
+							"y": -2.0649,
+							"z": 87.1053
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 314,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -30.7697,
+							"y": -3.0649,
+							"z": 145.5053
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 315,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -23.211000000000003,
+							"y": 1.4467,
+							"z": 99.7767
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -0.2721,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 316,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.9231,
+							"y": 2.0001,
+							"z": 95.7977
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 1.6876,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 317,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.265600000000004,
+							"y": 1.5828,
+							"z": 100.0113
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -1.1907,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 318,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.078,
+							"y": 1.2085000000000002,
+							"z": 92.8713
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": 0.8946000000000001,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 319,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.648600000000003,
+							"y": 1.4467,
+							"z": 76.06880000000001
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -1.6072000000000002,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 320,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -12.478900000000002,
+							"y": 2.0001,
+							"z": 76.3922
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 0.3524,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 321,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.1891,
+							"y": 1.5828,
+							"z": 78.9875
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5258000000000004,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 322,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -10.1364,
+							"y": 1.2085000000000002,
+							"z": 73.61370000000001
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.44060000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 323,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -23.5749,
+							"y": 1.4467,
+							"z": 95.8253
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -1.6072000000000002,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 324,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -19.4052,
+							"y": 2.0001,
+							"z": 96.14880000000001
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 0.3524,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 325,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -23.1154,
+							"y": 1.5828,
+							"z": 98.7441
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5258000000000004,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 326,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -17.0627,
+							"y": 1.2085000000000002,
+							"z": 93.37020000000001
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.44060000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 327,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.0214,
+							"y": 1.4467,
+							"z": 111.89460000000001
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -1.6072000000000002,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 328,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.8517,
+							"y": 2.0001,
+							"z": 112.2181
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 0.3524,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 329,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.5619,
+							"y": 1.5828,
+							"z": 114.8134
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5258000000000004,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 330,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -14.5091,
+							"y": 1.2085000000000002,
+							"z": 109.4396
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.44060000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 331,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.0214,
+							"y": 1.4467,
+							"z": 162.9076
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -1.6072000000000002,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 332,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.8517,
+							"y": 2.0001,
+							"z": 163.231
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 0.3524,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 333,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.5619,
+							"y": 1.5828,
+							"z": 165.8263
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5258000000000004,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 334,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -14.5091,
+							"y": 1.2085000000000002,
+							"z": 160.45250000000002
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.44060000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 335,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -26.034000000000004,
+							"y": 1.4467,
+							"z": 143.0923
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -1.6072000000000002,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 336,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.8643,
+							"y": 2.0001,
+							"z": 143.41570000000002
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 0.3524,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 337,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -25.5745,
+							"y": 1.5828,
+							"z": 146.011
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5258000000000004,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 338,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -19.521800000000004,
+							"y": 1.2085000000000002,
+							"z": 140.6372
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.44060000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 339,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.056,
+							"y": 1.4467,
+							"z": 86.1062
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -1.6072000000000002,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 340,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.886300000000003,
+							"y": 2.0001,
+							"z": 86.42970000000001
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 0.3524,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 341,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.596400000000004,
+							"y": 1.5828,
+							"z": 89.025
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5258000000000004,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 342,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -14.543700000000002,
+							"y": 1.2085000000000002,
+							"z": 83.6511
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.44060000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 343,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.9478,
+							"y": 1.4467,
+							"z": 86.3816
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -0.8061,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 344,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.8137,
+							"y": 2.0001,
+							"z": 83.6123
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 1.1535,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 345,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -19.532,
+							"y": 1.5828,
+							"z": 88.0828
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -1.7247000000000002,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 346,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -19.178900000000004,
+							"y": 1.2085000000000002,
+							"z": 79.9965
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": 0.36050000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 347,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.3466,
+							"y": 1.4467,
+							"z": 135.06480000000003
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": 2.9271000000000004,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 348,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.4033,
+							"y": 2.5293,
+							"z": 139.1113
+						},
+						"Rotation": {
+							"x": -0.227,
+							"y": -1.3964,
+							"z": 0.0741
+						},
+						"Scale": {
+							"x": 1.0022,
+							"y": 2.093,
+							"z": 1.0203
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 349,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.3005,
+							"y": 1.5828,
+							"z": 135.0002
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": 2.0085,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 350,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -14.0835,
+							"y": 0.8642000000000001,
+							"z": 141.90890000000003
+						},
+						"Rotation": {
+							"x": -0.19740000000000003,
+							"y": -2.1894,
+							"z": -0.8268000000000001
+						},
+						"Scale": {
+							"x": 1.7509000000000002,
+							"y": 1.5262,
+							"z": 1.0153
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 351,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.5333,
+							"y": 1.4467,
+							"z": 159.1112
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": 1.5919,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 352,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.7148,
+							"y": 2.0,
+							"z": 159.0283
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": -2.7316000000000004,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 353,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.1601,
+							"y": 1.5828,
+							"z": 156.2237
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": 0.6734,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 354,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -26.8935,
+							"y": 1.2085000000000002,
+							"z": 161.93710000000002
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": 2.7586,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 355,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -14.755700000000001,
+							"y": 1.3652,
+							"z": 138.9887
+						},
+						"Rotation": {
+							"x": -0.9788,
+							"y": 1.5919,
+							"z": -0.6741
+						},
+						"Scale": {
+							"x": 1.2864,
+							"y": 1.6215000000000002,
+							"z": 1.4635
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 356,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.9372,
+							"y": 2.0,
+							"z": 138.9058
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": -2.7316000000000004,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 357,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.3825,
+							"y": 1.5828,
+							"z": 136.1013
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": 0.6734,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 358,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.1159,
+							"y": 1.2085000000000002,
+							"z": 141.8146
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": 2.7586,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 359,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.2301,
+							"y": 1.4467,
+							"z": 123.093
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": 1.5919,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 360,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -22.4115,
+							"y": 2.5293,
+							"z": 123.01020000000001
+						},
+						"Rotation": {
+							"x": -0.227,
+							"y": -2.7316000000000004,
+							"z": 0.0741
+						},
+						"Scale": {
+							"x": 1.0022,
+							"y": 2.093,
+							"z": 1.0203
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 361,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.8569,
+							"y": 1.5828,
+							"z": 120.2056
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": 0.6734,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 362,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.590200000000004,
+							"y": 1.2085000000000002,
+							"z": 125.91890000000001
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": 2.7586,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 363,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.166600000000004,
+							"y": 1.4467,
+							"z": 72.16470000000001
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": 1.5919,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 364,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -25.348000000000004,
+							"y": 2.0,
+							"z": 72.0818
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": -2.7316000000000004,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 365,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.793400000000003,
+							"y": 1.6515000000000003,
+							"z": 69.27720000000001
+						},
+						"Rotation": {
+							"x": 0.3141,
+							"y": 0.6734,
+							"z": -0.7048
+						},
+						"Scale": {
+							"x": 1.4224,
+							"y": 1.8228000000000003,
+							"z": 1.0392000000000002
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 366,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -27.5267,
+							"y": 1.2085000000000002,
+							"z": 74.9905
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": 2.7586,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 367,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.021600000000002,
+							"y": 1.3652,
+							"z": 91.6586
+						},
+						"Rotation": {
+							"x": -0.9788,
+							"y": 1.5919,
+							"z": -0.6741
+						},
+						"Scale": {
+							"x": 1.2864,
+							"y": 1.6215000000000002,
+							"z": 1.4635
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 368,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -19.203,
+							"y": 2.0,
+							"z": 91.5757
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": -2.7316000000000004,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 369,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.6484,
+							"y": 1.5828,
+							"z": 88.7711
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": 0.6734,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 370,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.381700000000003,
+							"y": 0.8642000000000001,
+							"z": 94.48450000000001
+						},
+						"Rotation": {
+							"x": -0.19740000000000003,
+							"y": 2.7586,
+							"z": -0.8268000000000001
+						},
+						"Scale": {
+							"x": 1.7509000000000002,
+							"y": 1.5262,
+							"z": 1.0153
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 371,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.711100000000003,
+							"y": 1.4467,
+							"z": 148.8367
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": 1.5919,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 372,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.892500000000003,
+							"y": 2.0,
+							"z": 148.7538
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": -2.7316000000000004,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 373,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -17.3378,
+							"y": 1.5828,
+							"z": 145.9493
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": 0.6734,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 374,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -23.0712,
+							"y": 0.8642000000000001,
+							"z": 151.6626
+						},
+						"Rotation": {
+							"x": -0.19740000000000003,
+							"y": 2.7586,
+							"z": -0.8268000000000001
+						},
+						"Scale": {
+							"x": 1.7509000000000002,
+							"y": 1.5262,
+							"z": 1.0153
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 375,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.8366,
+							"y": 1.4467,
+							"z": 148.5105
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": 2.3931,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 376,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.806,
+							"y": 2.0001,
+							"z": 151.4556
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": -1.9305,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 377,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.3463,
+							"y": 1.6515000000000003,
+							"z": 146.9511
+						},
+						"Rotation": {
+							"x": 0.3141,
+							"y": 1.4745000000000002,
+							"z": -0.7048
+						},
+						"Scale": {
+							"x": 1.4224,
+							"y": 1.8228000000000003,
+							"z": 1.0392000000000002
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 378,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.2333,
+							"y": 1.2085000000000002,
+							"z": 155.0444
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -2.7235,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 379,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 11.4437,
+							"y": 1.5828,
+							"z": 88.6452
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5258000000000004,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 380,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 17.4964,
+							"y": 1.2085000000000002,
+							"z": 83.2714
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.44060000000000007,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 381,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 10.092400000000002,
+							"y": 1.4467,
+							"z": 86.0018
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -0.8061,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 382,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 13.263200000000002,
+							"y": 2.0001,
+							"z": 83.2346
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 1.1561000000000002,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 383,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 12.556700000000001,
+							"y": 1.5828,
+							"z": 87.70700000000001
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -1.7221000000000002,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 384,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 12.1852,
+							"y": 1.5828,
+							"z": 55.5608
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -2.5232,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 385,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 18.2238,
+							"y": 1.2085000000000002,
+							"z": 50.1712
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": -0.438,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 386,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 10.8695,
+							"y": 1.4467,
+							"z": 52.912600000000008
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": -0.8061,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 387,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 14.0035,
+							"y": 2.0001,
+							"z": 50.1433
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 1.1535,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 388,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 13.285300000000002,
+							"y": 1.5828,
+							"z": 54.613800000000008
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -1.7247000000000002,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 389,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 15.2368,
+							"y": 1.5828,
+							"z": 20.4895
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -1.5598,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 390,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 14.2574,
+							"y": 1.2085000000000002,
+							"z": 12.455
+						},
+						"Rotation": {
+							"x": -0.09480000000000001,
+							"y": 0.5254,
+							"z": -0.8947
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 391,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 12.2939,
+							"y": 1.4467,
+							"z": 20.098300000000003
+						},
+						"Rotation": {
+							"x": -0.6154000000000001,
+							"y": 0.15990000000000002,
+							"z": -0.5649000000000001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 392,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 11.7977,
+							"y": 2.0001,
+							"z": 15.9456
+						},
+						"Rotation": {
+							"x": -0.10940000000000001,
+							"y": 2.1196,
+							"z": 0.0356
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 393,
+				"Name": "Metal Pole Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 15.0669,
+							"y": 1.5828,
+							"z": 19.078200000000004
+						},
+						"Rotation": {
+							"x": 0.1532,
+							"y": -0.7587,
+							"z": -0.5859
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 394,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.4835,
+							"y": 0.08660000000000001,
+							"z": 50.4236
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.4817,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 395,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.4905,
+							"y": 0.0867,
+							"z": 68.2766
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": 0.7854,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 396,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -26.413,
+							"y": 0.0867,
+							"z": 50.205000000000008
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": 0.7854,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 397,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -21.296200000000004,
+							"y": 0.0867,
+							"z": 39.106500000000007
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.5733,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 398,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -29.601300000000003,
+							"y": 0.0867,
+							"z": 77.9096
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.39530000000000006,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 399,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -30.829600000000004,
+							"y": 0.0867,
+							"z": 115.9402
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.233,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 400,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -40.244,
+							"y": 0.08660000000000001,
+							"z": 138.7835
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.2932,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 401,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -30.509700000000004,
+							"y": 0.0867,
+							"z": 156.0358
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": 1.8981000000000002,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 402,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -29.2359,
+							"y": 0.0867,
+							"z": 173.2329
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.8351000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 403,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -29.8976,
+							"y": 0.0867,
+							"z": 168.19660000000003
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.5864,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 4.0,
+							"y": 4.0,
+							"z": 4.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 404,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -40.771300000000007,
+							"y": 0.0867,
+							"z": 187.46040000000003
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": 0.7514000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 4.0,
+							"y": 4.0,
+							"z": 4.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 405,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 10.5645,
+							"y": 0.08660000000000001,
+							"z": 19.9628
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.4817,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 406,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -17.1874,
+							"y": 0.08660000000000001,
+							"z": -18.6184
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.4817,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 407,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -0.013300000000000001,
+							"z": 186.8608
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 408,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -0.013300000000000001,
+							"z": 197.31920000000003
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 409,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -0.013300000000000001,
+							"z": 207.04340000000003
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 410,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -18.5885,
+							"y": -0.013300000000000001,
+							"z": 214.7946
+						},
+						"Rotation": {
+							"x": -1.0707,
+							"y": -0.5942000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 411,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.5779,
+							"y": 0.0867,
+							"z": 209.0103
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": 0.7514000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 4.0,
+							"y": 4.0,
+							"z": 4.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 412,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -14.501000000000002,
+							"y": 0.0867,
+							"z": 199.7956
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": -0.8351000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 413,
+				"Name": "Cube Black",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -19.6906,
+							"y": 0.0867,
+							"z": 189.49630000000003
+						},
+						"Rotation": {
+							"x": 0.7854,
+							"y": 0.38230000000000005,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 414,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -45.596000000000007,
+							"y": -0.3851,
+							"z": 206.79170000000003
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 415,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.844,
+							"y": 3.1629,
+							"z": 201.79080000000003
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 416,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.844,
+							"y": 3.1629,
+							"z": 213.7183
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 417,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.844,
+							"y": 3.1629,
+							"z": 225.4634
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 418,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.224,
+							"y": -2.7465,
+							"z": 207.65540000000002
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 419,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.224,
+							"y": -2.7465,
+							"z": 219.88420000000003
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 420,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.224,
+							"y": -2.7465,
+							"z": 196.04850000000003
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 421,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -24.224,
+							"y": -2.7465,
+							"z": 232.08110000000003
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 422,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -0.013300000000000001,
+							"z": 220.3095
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 423,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -0.013300000000000001,
+							"z": 231.30630000000003
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 424,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -6.1272,
+							"z": 227.62660000000003
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 425,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -2.5065,
+							"z": 240.0608
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 426,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -0.013300000000000001,
+							"z": 243.3718
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 427,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -2.8654,
+							"z": 255.0514
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 428,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.1773,
+							"y": -1.542,
+							"z": 279.00010000000006
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 429,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.7834,
+							"y": 4.8175,
+							"z": 279.0718
+						},
+						"Rotation": {
+							"x": 1.5708,
+							"y": -1.5708,
+							"z": 3.1416
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 430,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.7113,
+							"y": -0.7484000000000001,
+							"z": 272.7318
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 431,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.7113,
+							"y": -0.7484000000000001,
+							"z": 285.4076
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 432,
+				"Name": "Cube Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -12.0609,
+							"y": -0.0858,
+							"z": 278.8743
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 4.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 433,
+				"Name": "Cube Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -13.931000000000001,
+							"y": 1.8819000000000002,
+							"z": 278.8743
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 4.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/cube_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 434,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.0892,
+							"y": -2.3524000000000004,
+							"z": 272.6784
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 435,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.0892,
+							"y": -2.3524000000000004,
+							"z": 285.3528
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 436,
+				"Name": "Flag",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -13.2927,
+							"y": 9.3199,
+							"z": 272.9863
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/flag.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 437,
+				"Name": "Metal Pole",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -13.315900000000001,
+							"y": 9.2695,
+							"z": 272.9776
+						},
+						"Rotation": {
+							"x": 1.5708,
+							"y": 3.1416,
+							"z": 3.1416
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 0.4001,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 438,
+				"Name": "Flag",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -13.2927,
+							"y": 9.3199,
+							"z": 285.46500000000006
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": 1.5708,
+							"z": 0.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/flag.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 439,
+				"Name": "Metal Pole",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -13.315900000000001,
+							"y": 9.2695,
+							"z": 285.4563
+						},
+						"Rotation": {
+							"x": 1.5708,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0,
+							"y": 0.4001,
+							"z": 1.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/metal_pole.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 440,
+				"Name": "Box02",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -16.6106,
+							"y": 4.7155000000000009,
+							"z": 279.0625
+						},
+						"Rotation": {
+							"x": -0.0,
+							"y": -1.5707,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/Box02.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 441,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -26.908,
+							"y": -2.3524000000000004,
+							"z": 272.6784
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 442,
+				"Name": "Pillar Grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -26.908,
+							"y": -2.3524000000000004,
+							"z": 285.51210000000006
+						},
+						"Scale": {
+							"x": 2.7001,
+							"y": 2.75,
+							"z": 2.7001
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 443,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -2.8654,
+							"z": 301.6016
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 444,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -6.1464,
+							"z": 297.84700000000006
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 445,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -6.1464,
+							"z": 314.71590000000006
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_red.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 446,
+				"Name": "Pillar Red",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -15.314400000000001,
+							"y": -4.9682,
+							"z": 265.4982
+						},
+						"Scale": {
+							"x": 2.0,
+							"y": 2.0,
+							"z": 2.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/pillar_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 447,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -52.5615,
+							"y": -5.800000000000001,
+							"z": 242.32610000000003
+						},
+						"Rotation": {
+							"x": -0.17450000000000003,
+							"y": 1.5708,
+							"z": 0.7854
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 448,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -44.5615,
+							"y": -0.2,
+							"z": 297.02610000000007
+						},
+						"Rotation": {
+							"x": -0.17450000000000003,
+							"y": 1.5708,
+							"z": 0.7854
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 449,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -56.0615,
+							"y": -4.7,
+							"z": 269.1261
+						},
+						"Rotation": {
+							"x": -0.17450000000000003,
+							"y": 1.5708,
+							"z": 0.7854
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 450,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -61.261500000000008,
+							"y": -4.7,
+							"z": 253.2261
+						},
+						"Rotation": {
+							"x": -0.17450000000000003,
+							"y": 1.5708,
+							"z": 0.7854
+						},
+						"Scale": {
+							"x": 2.5,
+							"y": 2.5,
+							"z": 2.5
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 451,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -37.161500000000007,
+							"y": -14.8,
+							"z": 281.6261
+						},
+						"Rotation": {
+							"x": -0.17450000000000003,
+							"y": 1.5708,
+							"z": 0.7854
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 452,
+				"Name": "wall grey",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -28.8351,
+							"y": -14.8,
+							"z": 235.496
+						},
+						"Rotation": {
+							"x": -0.17450000000000003,
+							"y": 1.5708,
+							"z": 0.7854
+						},
+						"Scale": {
+							"x": 3.0,
+							"y": 3.0,
+							"z": 3.0
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/wall_black.geo"
+					}
+				}
+			}
+		},
+		"NodeHierarchy": {
+			"Link": {
+				"Node": 262,
+				"Parent": 271
+			},
+			"Link": {
+				"Node": 263,
+				"Parent": 271
+			},
+			"Link": {
+				"Node": 264,
+				"Parent": 267
+			},
+			"Link": {
+				"Node": 265,
+				"Parent": 267
+			},
+			"Link": {
+				"Node": 270,
+				"Parent": 262
+			}
+		},
+		"Skeletons": {},
+		"State": {
+			"CurrentCamera": {
+				"Uid": 263
+			}
+		}
+	}
+}
