@@ -34,6 +34,7 @@ def convert_folder(folder_path):
 					function_indent_level = -1
 
 					within_if = False
+
 					within_for = False
 
 					members_collected = []
@@ -110,9 +111,12 @@ def convert_folder(folder_path):
 
 							# ReWrite comment
 							if within_comment or current_line.startswith('//') or current_line.startswith('/*') or current_line.startswith('*/'):
-								current_line = '# ' + current_line[2:]
+								current_line = '# ' + current_line #[2:]
 
 							current_line = current_line.replace('//', '# ')
+
+							current_line = current_line.replace('/*', '')
+							current_line = current_line.replace('*/', '')
 
 							current_line = ('\t' * indent_level) + current_line
 							current_line += '\n'
