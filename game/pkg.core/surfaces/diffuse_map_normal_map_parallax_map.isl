@@ -88,6 +88,7 @@ variant {
 			vec3 n = texture2D(normal_map, uv).xyz;
 			n = UnpackVectorFromColor(n);
 			n = normalize(tangent_matrix * n);
+			n = vNormalViewMatrix * n;
 
 			%normal% = n;
 			%diffuse% = texture2D(diffuse_map, uv).xyz;

@@ -48,19 +48,4 @@ float SampleDepthBuffer(tex2D depth_buffer, vec2 uv)
 	return 1.0;
 }
 
-#ifdef USE_HW_INSTANCING
-
-// redirect variables to attributes
-# define vModelMatrix vInstanceModelMatrix
-# define vPreviousModelMatrix vInstancePreviousModelMatrix
-# define vPickingId vInstancePickingId
-
-// the following values are computed in the shader as they no longer are invariants
-# define vNormalMatrix vInstanceNormalMatrix
-# define vNormalViewMatrix vInstanceNormalViewMatrix
-# define vModelViewMatrix vInstanceModelViewMatrix
-# define vModelViewProjectionMatrix vInstanceModelViewProjectionMatrix
-
-#endif // USE_HW_INSTANCING
-
 #endif // COMMON_I

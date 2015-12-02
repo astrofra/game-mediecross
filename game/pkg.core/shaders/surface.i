@@ -6,11 +6,13 @@ variant {
 			vec4 vPixelPos;
 			vec3 vPixelNormal;
 			mat4 vSkinMatrix;
-			mat3 vNormalSkinMatrix;
+			mat3 vSkinNormalMatrix;
 			vec4 vProjPos;
 			vec4 vPrevProjPos;
 			vec4 vPixelPickingId;
 			vec2 vTerrainUV;
+			mat3 vInstanceNormalMatrix;
+			mat3 vInstanceNormalViewMatrix;
 		}
 
 		global %{
@@ -54,11 +56,24 @@ variant {
 #if defined(IS_TERRAIN)
 	float SampleTerrain(vec2 uv)
 	{
-		float y = bicubic_filter(vTerrainHeightmap, uv * vTerrainHeightmapSize, 1.0 / vTerrainHeightmapSize).r;
-		// float y = texture2D(vTerrainHeightmap, uv).r;
+		//float y = bicubic_filter(vTerrainHeightmap, uv * vTerrainHeightmapSize, 1.0 / vTerrainHeightmapSize).r;
+		float y = texture2D(vTerrainHeightmap, uv).r;
 		return y * vTerrainSize.y;
 	}
 #endif // IS_TERRAIN
+
+#if defined(USE_HW_INSTANCING)
+	// redirect variables to attributes
+	#define vModelMatrix vInstanceModelMatrix
+	#define vPreviousModelMatrix vInstancePreviousModelMatrix
+	#define vPickingId vInstancePickingId
+
+	// the following values are computed in the shader as they no longer are invariants
+	#define vNormalMatrix vInstanceNormalMatrix
+	#define vNormalViewMatrix vInstanceNormalViewMatrix
+	#define vModelViewMatrix vInstanceModelViewMatrix
+	#define vModelViewProjectionMatrix vInstanceModelViewProjectionMatrix
+#endif // USE_HW_INSTANCING
 		%}
 
 		source %{
@@ -97,8 +112,8 @@ variant {
 
 # if defined(USE_HW_INSTANCING)
 	// compute HW instancing invariants and hope the compiler optimize these out when left unreferenced
-	mat3 vInstanceNormalMatrix = mat3(normalize(vModelMatrix[0].xyz), normalize(vModelMatrix[1].xyz), normalize(vModelMatrix[2].xyz));
-	mat3 vInstanceNormalViewMatrix = _mtx_mul(mat3(vViewMatrix[0].xyz, vViewMatrix[1].xyz, vViewMatrix[2].xyz), vInstanceNormalMatrix);
+	vInstanceNormalMatrix = mat3(normalize(vModelMatrix[0].xyz), normalize(vModelMatrix[1].xyz), normalize(vModelMatrix[2].xyz));
+	vInstanceNormalViewMatrix = _mtx_mul(mat3(vViewMatrix[0].xyz, vViewMatrix[1].xyz, vViewMatrix[2].xyz), vInstanceNormalMatrix);
 	mat4 vInstanceModelViewMatrix = _mtx_mul(vViewMatrix, vModelMatrix);
 	mat4 vInstanceModelViewProjectionMatrix = _mtx_mul(vViewProjectionMatrix, vModelMatrix);
 # endif // USE_HW_INSTANCING
@@ -111,10 +126,21 @@ variant {
 	%normal% = vNormal;
 # endif
 
-#endif // IS_TERRAIN
+# if defined(USE_SKINNING)
+	vSkinMatrix = BuildSkinMatrix();
+	vSkinNormalMatrix = _mat4_to_mat3(vSkinMatrix); // FIXME will break with scaling...
+#endif
+
+#endif // !IS_TERRAIN
 
 	// SHADER CODE
 	%shader_code%
+
+#if defined(USE_SKINNING)
+	vec4 vPreSkinPosition = %position%;
+	%position% = _mtx_mul(vSkinMatrix, %position%);
+	%normal% = _mtx_mul(vSkinNormalMatrix, %normal%);
+#endif
 
 #if defined(PIXEL_SHADER_REQUIRES_VPIXELPOS)
 	vPixelPos = %position%;
@@ -122,14 +148,6 @@ variant {
 
 #if defined(PIXEL_SHADER_REQUIRES_VPIXELNORMAL)
 	vPixelNormal = _mtx_mul(vNormalViewMatrix, %normal%);
-#endif
-
-#if defined(USE_SKINNING)
-	vec4 vPreSkinPosition = %position%;
-	vSkinMatrix = BuildSkinMatrix();
-	vNormalSkinMatrix = _mat4_to_mat3(vSkinMatrix); // FIXME will break with scaling...
-	%position% = _mtx_mul(vSkinMatrix, %position%);
-	%normal% = _mtx_mul(vNormalSkinMatrix, %normal%);
 #endif
 
 	// START RenderPass surface/shader glue code
@@ -216,7 +234,19 @@ variant {
 	}
 
 	pixel {
+		global %{
+#if defined(USE_HW_INSTANCING)
+	#define vNormalMatrix vPixelInstanceNormalMatrix
+	#define vNormalViewMatrix vPixelInstanceNormalViewMatrix
+#endif // USE_HW_INSTANCING
+		%}
+
 		source %{
+#if defined(USE_HW_INSTANCING)
+	mat3 vPixelInstanceNormalMatrix = mat3(normalize(vInstanceNormalMatrix[0]), normalize(vInstanceNormalMatrix[1]), normalize(vInstanceNormalMatrix[2]));
+	mat3 vPixelInstanceNormalViewMatrix = mat3(normalize(vInstanceNormalViewMatrix[0]), normalize(vInstanceNormalViewMatrix[1]), normalize(vInstanceNormalViewMatrix[2]));
+#endif // USE_HW_INSTANCING
+
 	vec3 %normal%;
 
 #if defined(PIXEL_SHADER_REQUIRES_VPIXELNORMAL) && !defined(PIXEL_SHADER_WRITES_TO_NORMAL)

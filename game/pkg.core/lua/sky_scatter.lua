@@ -49,7 +49,7 @@ function EndRenderPass(pass)
 	-- configure the rayleigh shader
 	renderer:SetShader(shader)
 
-	local view_rotation = render_system:GetView().transform:GetCurrent().rotation
+	local view_rotation = render_system:GetView().transform:GetWorld():GetRotationMatrix()
 
 	renderer:SetShaderMatrix3("view_rotation", view_rotation)
 
