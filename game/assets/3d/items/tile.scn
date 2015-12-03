@@ -20,16 +20,6 @@
 					},
 					"gs::core::RigidBody": {
 						"Activate": true,
-						"LinearFactor": {
-							"x": 0.0,
-							"y": 0.0,
-							"z": 0.0
-						},
-						"AngularFactor": {
-							"x": 0.0,
-							"y": 0.0,
-							"z": 0.0
-						},
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
@@ -38,6 +28,9 @@
 					},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
+							"Matrix": {
+								"m13": -0.55
+							},
 							"SelfMask": 0,
 							"CollisionMask": 0
 						},

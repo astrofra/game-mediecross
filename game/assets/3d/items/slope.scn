@@ -49,16 +49,6 @@
 					},
 					"gs::core::RigidBody": {
 						"Activate": true,
-						"LinearFactor": {
-							"x": 0.0,
-							"y": 0.0,
-							"z": 0.0
-						},
-						"AngularFactor": {
-							"x": 0.0,
-							"y": 0.0,
-							"z": 0.0
-						},
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
@@ -67,6 +57,14 @@
 					},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
+							"Matrix": {
+								"m11": 0.8911,
+								"m21": 0.454,
+								"m12": -0.4539,
+								"m22": 0.8911,
+								"m13": -0.9958,
+								"m23": 0.8229000000000001
+							},
 							"SelfMask": 0,
 							"CollisionMask": 0
 						},
@@ -78,6 +76,14 @@
 					},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
+							"Matrix": {
+								"m11": 0.8911,
+								"m21": -0.4539,
+								"m12": 0.454,
+								"m22": 0.8911,
+								"m13": -1.0063,
+								"m23": -0.4969
+							},
 							"SelfMask": 0,
 							"CollisionMask": 0
 						},
