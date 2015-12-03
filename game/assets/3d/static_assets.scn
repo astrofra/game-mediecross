@@ -3,7 +3,20 @@
 		"Editor": {
 			"SceneTools": {}
 		},
-		"Components": {},
+		"Components": {
+			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.43510000000000006,
+					"g": 0.43510000000000006,
+					"b": 0.43510000000000006
+				},
+				"AmbientColor": {
+					"r": 0.1962,
+					"g": 0.271,
+					"b": 0.4414
+				}
+			}
+		},
 		"Nodes": {
 			"Node": {
 				"Uid": 1,
@@ -59,8 +72,8 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 5.682,
-							"y": 0.0,
+							"x": 5.6821,
+							"y": -0.07490000000000001,
 							"z": 0.0187
 						}
 					},
@@ -77,7 +90,7 @@
 						"Position": {
 							"x": 6.1709000000000009,
 							"y": 0.0,
-							"z": -0.3204
+							"z": -0.32030000000000005
 						}
 					},
 					"gs::core::Object": {
@@ -91,9 +104,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 4.728000000000001,
+							"x": 4.7281,
 							"y": 0.0,
-							"z": -0.3617
+							"z": -0.36160000000000006
 						}
 					},
 					"gs::core::Object": {
@@ -123,7 +136,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 10.596400000000001,
+							"x": 10.5966,
 							"y": 0.0,
 							"z": -0.028200000000000004
 						}
@@ -141,7 +154,7 @@
 						"Position": {
 							"x": 12.761700000000002,
 							"y": 0.0,
-							"z": -0.0826
+							"z": -0.0825
 						}
 					},
 					"gs::core::Object": {
@@ -155,9 +168,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 14.8353,
+							"x": 14.8354,
 							"y": 0.0,
-							"z": -0.0007
+							"z": -0.0006000000000000001
 						}
 					},
 					"gs::core::Object": {
@@ -203,9 +216,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 22.4734,
+							"x": 22.4735,
 							"y": 0.0,
-							"z": 0.0006000000000000001
+							"z": 0.0007
 						},
 						"Rotation": {
 							"x": -0.0,
@@ -224,7 +237,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 25.046400000000003,
+							"x": 25.0465,
 							"y": 0.0,
 							"z": 0.0014
 						}
@@ -240,7 +253,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 11.223600000000002,
+							"x": 11.223700000000001,
 							"y": 0.0,
 							"z": -2.9247
 						}
@@ -272,7 +285,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 33.1618,
+							"x": 33.1619,
 							"y": 0.0,
 							"z": 0.3951
 						}
@@ -288,7 +301,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 34.7765,
+							"x": 34.7766,
 							"y": 2.5,
 							"z": 0.3166
 						}
@@ -305,7 +318,7 @@
 					"gs::core::Transform": {
 						"Position": {
 							"x": 36.1638,
-							"y": 4.4527,
+							"y": 4.4528,
 							"z": -0.0017000000000000002
 						}
 					},
@@ -336,8 +349,8 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -14.7765,
-							"y": 1.0002,
+							"x": -14.7763,
+							"y": 1.0004,
 							"z": -8.9392
 						}
 					},
@@ -352,7 +365,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -46.054700000000007,
+							"x": -46.054500000000007,
 							"y": 6.0,
 							"z": -9.5093
 						}
@@ -370,7 +383,7 @@
 						"Position": {
 							"x": 4.5167,
 							"y": 0.1794,
-							"z": -10.208400000000001
+							"z": -10.2082
 						}
 					},
 					"gs::core::Object": {
@@ -386,7 +399,7 @@
 						"Position": {
 							"x": 27.8125,
 							"y": 1.2741,
-							"z": -7.162400000000001
+							"z": -7.1623
 						}
 					},
 					"gs::core::Object": {
@@ -418,7 +431,7 @@
 						"Position": {
 							"x": -0.42210000000000005,
 							"y": 0.1794,
-							"z": -10.208400000000001
+							"z": -10.2082
 						}
 					},
 					"gs::core::Object": {
@@ -448,9 +461,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 10.596400000000001,
+							"x": 10.5966,
 							"y": 0.0,
-							"z": 1.6979000000000002
+							"z": 1.6980000000000002
 						}
 					},
 					"gs::core::Object": {
@@ -464,7 +477,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 10.596400000000001,
+							"x": 10.5966,
 							"y": 0.0,
 							"z": 3.5735
 						}
@@ -512,7 +525,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 33.1618,
+							"x": 33.1619,
 							"y": 0.0,
 							"z": 2.8857
 						}
@@ -528,7 +541,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 33.1618,
+							"x": 33.1619,
 							"y": 0.0,
 							"z": 5.2731
 						}
@@ -544,7 +557,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 33.1618,
+							"x": 33.1619,
 							"y": 0.0,
 							"z": 8.1241
 						}
@@ -576,9 +589,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 10.596400000000001,
+							"x": 10.5966,
 							"y": 0.0,
-							"z": 5.665900000000001
+							"z": 5.666
 						}
 					},
 					"gs::core::Object": {
@@ -592,9 +605,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 34.7765,
+							"x": 34.7766,
 							"y": 2.5,
-							"z": 2.3506
+							"z": 2.3507000000000004
 						}
 					},
 					"gs::core::Object": {
@@ -608,7 +621,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -46.054700000000007,
+							"x": -46.054500000000007,
 							"y": 6.0,
 							"z": -4.1623
 						}
@@ -624,7 +637,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -46.054700000000007,
+							"x": -46.054500000000007,
 							"y": 6.0,
 							"z": 2.1067
 						}
@@ -640,9 +653,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -46.054700000000007,
+							"x": -46.054500000000007,
 							"y": 6.0,
-							"z": 9.057
+							"z": 9.0572
 						}
 					},
 					"gs::core::Object": {
@@ -654,15 +667,122 @@
 				"Uid": 41,
 				"Name": "Default Camera",
 				"Components": {
-					"gs::core::Transform": {},
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.4697,
+							"y": 22.9774,
+							"z": -30.0899
+						},
+						"Rotation": {
+							"x": 0.47790000000000007,
+							"y": 0.6709,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0001
+						}
+					},
 					"gs::core::Camera": {
-						"ZNear": 0.1,
+						"ZNear": 0.10020000000000001,
 						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 42,
+				"Name": "light_rig",
+				"Components": {
+					"gs::core::Transform": {
+						"Rotation": {
+							"x": -0.0,
+							"y": 2.6887000000000005,
+							"z": -0.2696
+						}
+					},
+					"gs::core::Object": {}
+				}
+			},
+			"Node": {
+				"Uid": 43,
+				"Name": "main_light",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 2.6206,
+							"z": 4.1162
+						},
+						"Rotation": {
+							"x": 0.24350000000000003,
+							"y": 2.5842,
+							"z": 0.0
+						}
+					},
+					"gs::core::Light": {
+						"Model": "Linear",
+						"Shadow": "ShadowMap",
+						"ShadowRange": 70.0,
+						"ZNear": 0.02,
+						"ClipDistance": 300.0,
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 1.0,
+							"b": 1.0
+						},
+						"DiffuseIntensity": 1.25,
+						"SpecularIntensity": 1.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 44,
+				"Name": "rim_light",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -0.0,
+							"y": 2.6206,
+							"z": 4.1162
+						},
+						"Rotation": {
+							"x": -0.1474,
+							"y": -0.05,
+							"z": -0.2084
+						}
+					},
+					"gs::core::Light": {
+						"Model": "Linear",
+						"Shadow": "ShadowMap",
+						"ShadowRange": 500.0,
+						"ZNear": 0.02,
+						"ClipDistance": 300.0,
+						"DiffuseColor": {
+							"r": 0.6669,
+							"g": 0.6669,
+							"b": 1.0
+						},
+						"SpecularColor": {
+							"r": 0.7689,
+							"g": 0.8041,
+							"b": 1.0
+						},
+						"SpecularIntensity": 1.0
 					}
 				}
 			}
 		},
-		"NodeHierarchy": {},
+		"NodeHierarchy": {
+			"Link": {
+				"Node": 43,
+				"Parent": 42
+			},
+			"Link": {
+				"Node": 44,
+				"Parent": 42
+			}
+		},
 		"Skeletons": {},
 		"State": {
 			"CurrentCamera": {

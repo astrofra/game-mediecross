@@ -1,11 +1,21 @@
 {
 	"Material": {
-		"Shader": "@core/surfaces/diffuse_map.isl",
+		"Shader": "assets/shaders/diffuse_map_specular_map_normal_map_repeat",
 		"MaterialValues": {
 			"Value": {
 				"Name": "diffuse_map",
 				"Type": "tex2D",
 				"Value": "assets/3d/clay_black_color.png"
+			},
+			"Value": {
+				"Name": "specular_map",
+				"Type": "tex2D",
+				"Value": "assets/3d/clay_spec.png"
+			},
+			"Value": {
+				"Name": "normal_map",
+				"Type": "tex2D",
+				"Value": "assets/3d/clay_normal.png"
 			}
 		}
 	}
