@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				}
 			}
@@ -27,13 +30,13 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 2.9442,
+							"x": 2.9443,
 							"y": -2.0699,
-							"z": 2.9242000000000005
+							"z": 2.9243
 						},
 						"Rotation": {
 							"x": -0.0,
-							"y": -3.1415,
+							"y": -3.1414,
 							"z": 0.0
 						},
 						"Scale": {
@@ -54,17 +57,17 @@
 					"gs::core::Transform": {
 						"Position": {
 							"x": 0.40940000000000006,
-							"y": 1.1,
+							"y": 1.1002,
 							"z": 14.6963
 						},
 						"Rotation": {
 							"x": 0.0747,
-							"y": -3.1137,
+							"y": -3.1136000000000005,
 							"z": 0.0
 						}
 					},
 					"gs::core::Camera": {
-						"ZoomFactor": 2.5,
+						"ZoomFactor": 3.1501,
 						"ZFar": 50000.0
 					}
 				}
@@ -75,12 +78,12 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 5.4228000000000009,
-							"y": 7.2796,
-							"z": 10.2809
+							"x": 5.423,
+							"y": 7.2797,
+							"z": 10.2811
 						},
 						"Rotation": {
-							"x": 0.48960000000000006,
+							"x": 0.4897,
 							"y": -2.7227,
 							"z": 0.0
 						}
@@ -96,7 +99,7 @@
 							"b": 1.0
 						},
 						"SpecularIntensity": 1.0,
-						"ConeAngle": 0.0175,
+						"ConeAngle": 0.0176,
 						"EdgeAngle": 0.4364
 					}
 				}
@@ -107,25 +110,24 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -0.36200000000000007,
+							"x": -0.3619,
 							"y": -1.1358000000000002,
-							"z": 1.2163000000000002
+							"z": 1.2165000000000002
 						}
 					},
 					"gs::core::Light": {
-						"Shadow": "ShadowMap",
 						"ZNear": 0.02,
 						"Range": 10.0,
 						"ClipDistance": 300.0,
 						"DiffuseColor": {
 							"r": 1.0,
-							"g": 0.9373,
-							"b": 0.8118000000000001
+							"g": 0.9374,
+							"b": 0.812
 						},
 						"SpecularColor": {
 							"r": 1.0,
 							"g": 0.9687,
-							"b": 0.7961
+							"b": 0.7962
 						},
 						"SpecularIntensity": 1.0
 					}
@@ -137,24 +139,23 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Rotation": {
-							"x": 0.0131,
-							"y": 0.4451,
+							"x": 0.0132,
+							"y": 0.44520000000000006,
 							"z": -0.0
 						}
 					},
 					"gs::core::Light": {
 						"Model": "Linear",
-						"Shadow": "ShadowMap",
 						"ZNear": 0.02,
 						"ClipDistance": 300.0,
 						"DiffuseColor": {
 							"r": 1.0,
-							"g": 0.8001,
+							"g": 0.8002,
 							"b": 0.0
 						},
 						"SpecularColor": {
 							"r": 1.0,
-							"g": 0.7020000000000001,
+							"g": 0.7021000000000001,
 							"b": 0.0
 						},
 						"SpecularIntensity": 1.0
@@ -163,28 +164,27 @@
 			},
 			"Node": {
 				"Uid": 6,
-				"Name": "New Light",
+				"Name": "bounce_light",
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
 							"x": 2.0809,
-							"y": -3.2924,
-							"z": 4.3832
+							"y": -3.2922000000000004,
+							"z": 4.3833
 						}
 					},
 					"gs::core::Light": {
-						"Shadow": "ShadowMap",
 						"ZNear": 0.02,
 						"Range": 6.0,
 						"ClipDistance": 300.0,
 						"DiffuseColor": {
 							"r": 1.0,
-							"g": 0.33340000000000005,
+							"g": 0.3335,
 							"b": 0.0
 						},
 						"SpecularColor": {
 							"r": 1.0,
-							"g": 0.6667000000000001,
+							"g": 0.6669,
 							"b": 0.0
 						},
 						"DiffuseIntensity": 0.5,
@@ -220,11 +220,11 @@
 						},
 						"Rotation": {
 							"x": 0.0,
-							"y": -3.1415,
+							"y": -3.1414,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 0.1404,
+							"x": 0.1405,
 							"y": 0.1408,
 							"z": 0.1258
 						}
@@ -239,9 +239,7 @@
 				"Name": "light_handler",
 				"Components": {
 					"gs::core::Transform": {},
-					"gs::core::Object": {
-						"Geometry": ""
-					}
+					"gs::core::Object": {}
 				}
 			},
 			"Node": {
@@ -250,14 +248,14 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 3.0157000000000004,
-							"y": -4.1881,
+							"x": 3.0158,
+							"y": -4.188000000000001,
 							"z": 2.5317000000000005
 						},
 						"Scale": {
-							"x": 2.6584000000000005,
+							"x": 2.6585,
 							"y": 1.7082000000000002,
-							"z": 2.6584000000000005
+							"z": 2.6585
 						}
 					},
 					"gs::core::Object": {
@@ -271,9 +269,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 5.202,
+							"x": 5.202100000000001,
 							"y": -3.3849,
-							"z": 2.8199
+							"z": 2.8200000000000005
 						}
 					},
 					"gs::core::Object": {
@@ -287,8 +285,8 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 4.284800000000001,
-							"y": -4.6122000000000009,
+							"x": 4.285,
+							"y": -4.6121,
 							"z": 1.9382000000000002
 						}
 					},
@@ -303,12 +301,12 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -5.1459,
+							"x": -5.1458,
 							"y": -4.1247,
 							"z": 1.9382000000000002
 						},
 						"Rotation": {
-							"x": 0.0027,
+							"x": 0.0028,
 							"y": 0.0,
 							"z": 0.0
 						}
@@ -324,7 +322,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 0.0262,
+							"x": 0.0264,
 							"y": 1.4077000000000002,
 							"z": 5.0
 						},
@@ -335,7 +333,7 @@
 						},
 						"Scale": {
 							"x": 0.31770000000000006,
-							"y": 0.3185,
+							"y": 0.3186,
 							"z": 0.1258
 						}
 					},
@@ -350,8 +348,8 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -2.3741000000000005,
-							"y": 0.455,
+							"x": -2.374,
+							"y": 0.4551,
 							"z": 4.975700000000001
 						},
 						"Scale": {
@@ -362,6 +360,48 @@
 					},
 					"gs::core::Object": {
 						"Geometry": "assets/3d/mediecross_subtitle.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 16,
+				"Name": "ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -20.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Rotation": {
+							"x": 1.5708,
+							"y": -3.1414,
+							"z": 3.1416
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 17,
+				"Name": "ground",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 20.0,
+							"y": 0.0,
+							"z": 0.0
+						},
+						"Rotation": {
+							"x": 1.5708,
+							"y": -3.1414,
+							"z": 3.1416
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ground.geo"
 					}
 				}
 			}

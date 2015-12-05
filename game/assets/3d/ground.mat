@@ -10,12 +10,17 @@
 			"Value": {
 				"Name": "specular_map",
 				"Type": "tex2D",
-				"Value": "assets/3d/clay_black_color.png"
+				"Value": "assets/3d/black_color.png"
 			},
 			"Value": {
 				"Name": "normal_map",
 				"Type": "tex2D",
 				"Value": "assets/3d/paper_normal.png"
+			},
+			"Value": {
+				"Name": "glossiness",
+				"Type": "float",
+				"Value": "0.500000"
 			}
 		}
 	}
