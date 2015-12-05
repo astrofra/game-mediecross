@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -30,12 +33,12 @@
 					"gs::core::Transform": {
 						"Position": {
 							"x": 0.0,
-							"y": 0.3401,
-							"z": 0.0
+							"y": 0.793,
+							"z": 0.5800000000000001
 						},
 						"Rotation": {
-							"x": -0.9084000000000001,
-							"y": -3.1415,
+							"x": -0.9082,
+							"y": -3.1414,
 							"z": 3.1416
 						}
 					},
@@ -43,10 +46,64 @@
 						"Geometry": "assets/3d/GeoSphere01.geo"
 					}
 				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -10.3841,
+							"y": 5.2479000000000008,
+							"z": 2.2579000000000004
+						},
+						"Rotation": {
+							"x": 0.4176,
+							"y": 1.9195,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0003,
+							"y": 1.0003,
+							"z": 1.0003
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.10020000000000001,
+						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "New Light",
+				"DoNotInstantiate": true,
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3299,
+							"y": 2.8844000000000005,
+							"z": 1.2003000000000002
+						}
+					},
+					"gs::core::Light": {
+						"ShadowRange": 0.0,
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 1.0,
+							"b": 1.0
+						},
+						"SpecularIntensity": 1.0
+					}
+				}
 			}
 		},
 		"NodeHierarchy": {},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 2
+			}
+		}
 	}
 }

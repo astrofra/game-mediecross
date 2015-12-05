@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -39,7 +42,7 @@
 							"z": 1.5708
 						},
 						"Scale": {
-							"x": 1.0971,
+							"x": 1.0,
 							"y": 1.0,
 							"z": 0.35000000000000006
 						}
@@ -48,25 +51,13 @@
 						"Geometry": "assets/3d/cube_green.geo"
 					},
 					"gs::core::RigidBody": {
-						"Activate": true,
+						"gs::core::Component": {
+							"Enabled": false
+						},
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
 							"z": 0.0
-						}
-					},
-					"gs::core::BoxCollision": {
-						"gs::core::Collision": {
-							"Matrix": {
-								"m13": 5.0
-							},
-							"SelfMask": 0,
-							"CollisionMask": 0
-						},
-						"Dimensions": {
-							"x": 1.0,
-							"y": 10.0,
-							"z": 10.0
 						}
 					}
 				}
@@ -77,8 +68,8 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -0.9264,
-							"y": 0.5091,
+							"x": -0.9269000000000001,
+							"y": 0.5092,
 							"z": 0.0
 						},
 						"Rotation": {
@@ -96,25 +87,13 @@
 						"Geometry": "assets/3d/cube_green.geo"
 					},
 					"gs::core::RigidBody": {
-						"Activate": true,
+						"gs::core::Component": {
+							"Enabled": false
+						},
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
 							"z": 0.0
-						}
-					},
-					"gs::core::BoxCollision": {
-						"gs::core::Collision": {
-							"Matrix": {
-								"m13": 5.0
-							},
-							"SelfMask": 0,
-							"CollisionMask": 0
-						},
-						"Dimensions": {
-							"x": 1.0,
-							"y": 10.0,
-							"z": 10.0
 						}
 					}
 				}
@@ -125,8 +104,8 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 0.9312,
-							"y": 0.5091,
+							"x": 0.931,
+							"y": 0.5092,
 							"z": 0.0
 						},
 						"Scale": {
@@ -139,25 +118,13 @@
 						"Geometry": "assets/3d/cube_green.geo"
 					},
 					"gs::core::RigidBody": {
-						"Activate": true,
+						"gs::core::Component": {
+							"Enabled": false
+						},
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
 							"z": 0.0
-						}
-					},
-					"gs::core::BoxCollision": {
-						"gs::core::Collision": {
-							"Matrix": {
-								"m13": 5.0
-							},
-							"SelfMask": 0,
-							"CollisionMask": 0
-						},
-						"Dimensions": {
-							"x": 1.0,
-							"y": 10.0,
-							"z": 10.0
 						}
 					}
 				}
@@ -173,9 +140,7 @@
 							"z": 2.0
 						}
 					},
-					"gs::core::Object": {
-						"Geometry": ""
-					}
+					"gs::core::Object": {}
 				}
 			},
 			"Node": {
@@ -183,11 +148,8 @@
 				"Name": "root",
 				"Components": {
 					"gs::core::Transform": {},
-					"gs::core::Object": {
-						"Geometry": ""
-					},
+					"gs::core::Object": {},
 					"gs::core::RigidBody": {
-						"Activate": true,
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
@@ -207,6 +169,33 @@
 							"y": 3.0,
 							"z": 0.7000000000000001
 						}
+					}
+				}
+			},
+			"Node": {
+				"Uid": 6,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 3.2395,
+							"y": 7.0743,
+							"z": 8.7192
+						},
+						"Rotation": {
+							"x": 0.5399,
+							"y": -2.7858,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0001
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.10020000000000001,
+						"ZFar": 50000.0
 					}
 				}
 			}
@@ -230,6 +219,10 @@
 			}
 		},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 6
+			}
+		}
 	}
 }

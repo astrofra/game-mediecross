@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.757,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -29,16 +32,20 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Rotation": {
-							"x": 0.0,
-							"y": 1.5708,
+							"x": -0.0,
+							"y": 1.5709000000000002,
 							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0,
+							"z": 1.0001
 						}
 					},
 					"gs::core::Object": {
 						"Geometry": "assets/3d/barrel.geo"
 					},
 					"gs::core::RigidBody": {
-						"Activate": true,
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
@@ -52,19 +59,66 @@
 							"CollisionMask": 0
 						},
 						"Radius": 0.9
-					},
-					"gs::core::CapsuleCollision": {
-						"gs::core::Collision": {
-							"SelfMask": 0,
-							"CollisionMask": 0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 7.0751,
+							"y": 4.2773,
+							"z": -4.784400000000001
 						},
-						"Radius": 1.6001
+						"Rotation": {
+							"x": 0.46430000000000007,
+							"y": -0.9761000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0001
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "New Light",
+				"DoNotInstantiate": true,
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.4805,
+							"y": 2.8844000000000005,
+							"z": 1.2003000000000002
+						}
+					},
+					"gs::core::Light": {
+						"ShadowRange": 0.0,
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 1.0,
+							"b": 1.0
+						},
+						"SpecularIntensity": 1.0
 					}
 				}
 			}
 		},
 		"NodeHierarchy": {},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 2
+			}
+		}
 	}
 }

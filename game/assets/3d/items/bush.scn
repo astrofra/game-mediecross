@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -31,7 +34,7 @@
 						"Position": {
 							"x": 0.153,
 							"y": -0.0,
-							"z": -1.6858000000000002
+							"z": -1.6857
 						}
 					},
 					"gs::core::Instance": {
@@ -45,7 +48,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -0.6027,
+							"x": -0.6025,
 							"y": -0.0,
 							"z": -0.049100000000000008
 						},
@@ -66,7 +69,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 0.33640000000000006,
+							"x": 0.3365,
 							"y": -0.0,
 							"z": 1.6369
 						},
@@ -89,12 +92,12 @@
 						"Position": {
 							"x": 2.8625000000000004,
 							"y": -0.0,
-							"z": -2.0746
+							"z": -2.0745
 						},
 						"Scale": {
-							"x": 0.8001,
-							"y": 0.8001,
-							"z": 0.8001
+							"x": 0.8002,
+							"y": 0.8002,
+							"z": 0.8002
 						}
 					},
 					"gs::core::Instance": {
@@ -108,9 +111,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -0.6831,
+							"x": -0.683,
 							"y": 0.0001,
-							"z": -4.1154
+							"z": -4.1153
 						},
 						"Scale": {
 							"x": 0.7000000000000001,
@@ -131,22 +134,53 @@
 						"Position": {
 							"x": 1.0744,
 							"y": -0.0,
-							"z": 0.597
+							"z": 0.5972000000000001
 						},
 						"Scale": {
-							"x": 0.8001,
-							"y": 0.8001,
-							"z": 0.8001
+							"x": 0.8002,
+							"y": 0.8002,
+							"z": 0.8002
 						}
 					},
 					"gs::core::Instance": {
 						"Path": "assets/3d/items/ball_green.scn"
 					}
 				}
+			},
+			"Node": {
+				"Uid": 7,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 11.4856,
+							"y": 7.7599,
+							"z": -5.939
+						},
+						"Rotation": {
+							"x": 0.5224,
+							"y": -0.9739000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0001
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.10010000000000001,
+						"ZFar": 50000.0
+					}
+				}
 			}
 		},
 		"NodeHierarchy": {},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 7
+			}
+		}
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"Material": {
-		"Shader": "@core/surfaces/diffuse.isl",
+		"Shader": "@core/surfaces/diffuse_specular.isl",
 		"MaterialValues": {
 			"Value": {
 				"Name": "diffuse_color",

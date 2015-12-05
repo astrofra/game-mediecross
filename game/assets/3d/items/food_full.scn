@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.757,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -26,6 +29,7 @@
 			"Node": {
 				"Uid": 1,
 				"Name": "Ground",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
@@ -60,8 +64,56 @@
 				"Name": "Food",
 				"Components": {
 					"gs::core::Transform": {},
-					"gs::core::Object": {
-						"Geometry": ""
+					"gs::core::Object": {}
+				}
+			},
+			"Node": {
+				"Uid": 14,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 14.338000000000001,
+							"y": 5.663,
+							"z": -9.383700000000001
+						},
+						"Rotation": {
+							"x": 0.37470000000000006,
+							"y": -0.9912000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0001
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 15,
+				"Name": "New Light",
+				"DoNotInstantiate": true,
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.3299,
+							"y": 2.8844000000000005,
+							"z": 1.2003000000000002
+						}
+					},
+					"gs::core::Light": {
+						"ShadowRange": 0.0,
+						"SpecularColor": {
+							"r": 1.0,
+							"g": 1.0,
+							"b": 1.0
+						},
+						"SpecularIntensity": 1.0
 					}
 				}
 			}
@@ -73,6 +125,10 @@
 			}
 		},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 14
+			}
+		}
 	}
 }

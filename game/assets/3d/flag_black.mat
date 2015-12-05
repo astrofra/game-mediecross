@@ -1,6 +1,6 @@
 {
 	"Material": {
-		"Shader": "@core/surfaces/diffuse.isl",
+		"Shader": "assets/shaders/diffuse_dbl_sided.isl",
 		"MaterialValues": {
 			"Value": {
 				"Name": "diffuse_color",
