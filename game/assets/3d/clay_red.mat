@@ -16,6 +16,11 @@
 				"Name": "normal_map",
 				"Type": "tex2D",
 				"Value": "assets/3d/clay_normal.png"
+			},
+			"Value": {
+				"Name": "glossiness",
+				"Type": "float",
+				"Value": "0.031000"
 			}
 		}
 	}
