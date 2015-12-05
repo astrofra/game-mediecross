@@ -1,0 +1,27 @@
+{
+	"Material": {
+		"Shader": "assets/shaders/diffuse_map_specular_map_normal_map_vertex_color_repeat.isl",
+		"MaterialValues": {
+			"Value": {
+				"Name": "diffuse_map",
+				"Type": "tex2D",
+				"Value": "assets/3d/clay_green_color.png"
+			},
+			"Value": {
+				"Name": "specular_map",
+				"Type": "tex2D",
+				"Value": "assets/3d/clay_spec.png"
+			},
+			"Value": {
+				"Name": "normal_map",
+				"Type": "tex2D",
+				"Value": "assets/3d/clay_normal.png"
+			},
+			"Value": {
+				"Name": "glossiness",
+				"Type": "float",
+				"Value": "0.031000"
+			}
+		}
+	}
+}
