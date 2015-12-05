@@ -11,7 +11,7 @@
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.757,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
@@ -48,7 +48,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -0.1696,
+							"x": -0.1695,
 							"y": 4.206300000000001,
 							"z": -0.4575
 						},
@@ -64,7 +64,7 @@
 						}
 					},
 					"gs::core::Object": {
-						"Geometry": "assets/3d/cube_green.geo"
+						"Geometry": "assets/3d/cube_green_pivot_center.geo"
 					}
 				}
 			},
@@ -85,7 +85,7 @@
 						}
 					},
 					"gs::core::Object": {
-						"Geometry": "assets/3d/cube_green.geo"
+						"Geometry": "assets/3d/cube_green_pivot_center.geo"
 					}
 				}
 			},
@@ -95,9 +95,9 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -0.20040000000000003,
+							"x": -0.2003,
 							"y": 2.6350000000000004,
-							"z": -0.8907
+							"z": -0.8906000000000001
 						},
 						"Rotation": {
 							"x": 1.3352000000000002,
@@ -106,7 +106,7 @@
 						}
 					},
 					"gs::core::Object": {
-						"Geometry": "assets/3d/cube_green.geo"
+						"Geometry": "assets/3d/cube_green_pivot_center.geo"
 					}
 				}
 			},
@@ -127,7 +127,7 @@
 						}
 					},
 					"gs::core::Object": {
-						"Geometry": "assets/3d/cube_green.geo"
+						"Geometry": "assets/3d/cube_green_pivot_center.geo"
 					}
 				}
 			},
@@ -143,7 +143,7 @@
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.1,
+						"ZNear": 0.10010000000000001,
 						"ZFar": 50000.0
 					}
 				}
