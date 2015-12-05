@@ -28,17 +28,38 @@
 		"Nodes": {
 			"Node": {
 				"Uid": 1,
+				"Name": "ball",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.3401,
+							"z": 0.0
+						},
+						"Rotation": {
+							"x": -0.9082,
+							"y": -3.1414,
+							"z": 3.1416
+						}
+					},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/ball_green.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 2,
 				"Name": "Default Camera",
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -5.0416,
-							"y": 3.3181000000000004,
-							"z": 1.7648000000000002
+							"x": 3.7454,
+							"y": 2.7521,
+							"z": 1.2431
 						},
 						"Rotation": {
-							"x": 0.5086,
-							"y": 1.9076000000000002,
+							"x": 0.5487000000000001,
+							"y": -1.8911,
 							"z": 0.0
 						},
 						"Scale": {
@@ -48,52 +69,8 @@
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.10020000000000001,
+						"ZNear": 0.10010000000000001,
 						"ZFar": 50000.0
-					}
-				}
-			},
-			"Node": {
-				"Uid": 2,
-				"Name": "New Light",
-				"DoNotInstantiate": true,
-				"Components": {
-					"gs::core::Transform": {
-						"Position": {
-							"x": 0.3299,
-							"y": 2.8844000000000005,
-							"z": 1.2003000000000002
-						}
-					},
-					"gs::core::Light": {
-						"ShadowRange": 0.0,
-						"SpecularColor": {
-							"r": 1.0,
-							"g": 1.0,
-							"b": 1.0
-						},
-						"SpecularIntensity": 1.0
-					}
-				}
-			},
-			"Node": {
-				"Uid": 3,
-				"Name": "ball",
-				"Components": {
-					"gs::core::Transform": {
-						"Position": {
-							"x": 0.0002,
-							"y": 0.7926000000000001,
-							"z": 0.5800000000000001
-						},
-						"Rotation": {
-							"x": -0.9082,
-							"y": -3.1414,
-							"z": -3.1414
-						}
-					},
-					"gs::core::Object": {
-						"Geometry": "assets/3d/ball_green.geo"
 					}
 				}
 			}
@@ -102,7 +79,7 @@
 		"Skeletons": {},
 		"State": {
 			"CurrentCamera": {
-				"Uid": 1
+				"Uid": 2
 			}
 		}
 	}

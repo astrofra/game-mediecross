@@ -48,7 +48,7 @@
 						}
 					},
 					"gs::core::Object": {
-						"Geometry": "assets/3d/cube_green.geo"
+						"Geometry": "assets/3d/cube_green_pivot_center.geo"
 					},
 					"gs::core::RigidBody": {
 						"gs::core::Component": {
@@ -84,7 +84,7 @@
 						}
 					},
 					"gs::core::Object": {
-						"Geometry": "assets/3d/cube_green.geo"
+						"Geometry": "assets/3d/cube_green_pivot_center.geo"
 					},
 					"gs::core::RigidBody": {
 						"gs::core::Component": {
@@ -115,7 +115,7 @@
 						}
 					},
 					"gs::core::Object": {
-						"Geometry": "assets/3d/cube_green.geo"
+						"Geometry": "assets/3d/cube_green_pivot_center.geo"
 					},
 					"gs::core::RigidBody": {
 						"gs::core::Component": {
@@ -178,19 +178,19 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 3.2395,
+							"x": 3.2396000000000004,
 							"y": 7.0743,
-							"z": 8.7192
+							"z": 8.7193
 						},
 						"Rotation": {
-							"x": 0.5399,
-							"y": -2.7858,
+							"x": 0.54,
+							"y": -2.7857000000000005,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0001,
-							"y": 1.0001,
-							"z": 1.0001
+							"x": 1.0002,
+							"y": 1.0002,
+							"z": 1.0002
 						}
 					},
 					"gs::core::Camera": {

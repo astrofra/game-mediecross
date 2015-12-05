@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.757,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -44,11 +47,8 @@
 				"Name": "col",
 				"Components": {
 					"gs::core::Transform": {},
-					"gs::core::Object": {
-						"Geometry": ""
-					},
+					"gs::core::Object": {},
 					"gs::core::RigidBody": {
-						"Activate": true,
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
@@ -95,8 +95,8 @@
 							"SelfMask": 0,
 							"CollisionMask": 0
 						},
-						"Length": 0.9,
-						"Radius": 1.6001
+						"Length": 0.9001,
+						"Radius": 1.6002
 					},
 					"gs::core::CapsuleCollision": {
 						"gs::core::Collision": {
@@ -113,6 +113,33 @@
 						"Radius": 1.0
 					}
 				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 2.5895,
+							"y": 7.2603,
+							"z": -9.3876
+						},
+						"Rotation": {
+							"x": 0.627,
+							"y": -0.2579,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0001
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
+					}
+				}
 			}
 		},
 		"NodeHierarchy": {
@@ -122,6 +149,10 @@
 			}
 		},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 3
+			}
+		}
 	}
 }

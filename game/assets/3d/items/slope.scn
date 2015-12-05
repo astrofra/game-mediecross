@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.757,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -43,12 +46,15 @@
 				"Uid": 2,
 				"Name": "slope",
 				"Components": {
-					"gs::core::Transform": {},
-					"gs::core::Object": {
-						"Geometry": ""
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.0,
+							"y": 0.0001,
+							"z": 0.0
+						}
 					},
+					"gs::core::Object": {},
 					"gs::core::RigidBody": {
-						"Activate": true,
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
@@ -81,8 +87,8 @@
 								"m21": -0.4539,
 								"m12": 0.454,
 								"m22": 0.8911,
-								"m13": -1.0063,
-								"m23": -0.4969
+								"m13": -1.0062,
+								"m23": -0.4968
 							},
 							"SelfMask": 0,
 							"CollisionMask": 0
@@ -106,9 +112,7 @@
 							"z": 0.0
 						}
 					},
-					"gs::core::Object": {
-						"Geometry": ""
-					}
+					"gs::core::Object": {}
 				}
 			},
 			"Node": {
@@ -122,8 +126,33 @@
 							"z": 3.0
 						}
 					},
-					"gs::core::Object": {
-						"Geometry": ""
+					"gs::core::Object": {}
+				}
+			},
+			"Node": {
+				"Uid": 5,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 18.4448,
+							"y": -2.0281000000000004,
+							"z": -4.0264
+						},
+						"Rotation": {
+							"x": -0.0873,
+							"y": -0.9206000000000001,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
 					}
 				}
 			}
@@ -143,6 +172,10 @@
 			}
 		},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 5
+			}
+		}
 	}
 }

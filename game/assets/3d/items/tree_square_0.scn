@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.757,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -46,8 +49,8 @@
 					"gs::core::Transform": {
 						"Position": {
 							"x": 0.2144,
-							"y": 3.4391000000000004,
-							"z": -0.5635
+							"y": 3.4392,
+							"z": -0.5634
 						},
 						"Rotation": {
 							"x": 0.7854,
@@ -92,7 +95,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -0.1275,
+							"x": -0.1274,
 							"y": 1.6213000000000002,
 							"z": -1.2084000000000002
 						},
@@ -106,10 +109,31 @@
 						"Geometry": "assets/3d/cube_green.geo"
 					}
 				}
+			},
+			"Node": {
+				"Uid": 5,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 0.518,
+							"y": 2.8264,
+							"z": -10.627
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
+					}
+				}
 			}
 		},
 		"NodeHierarchy": {},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 5
+			}
+		}
 	}
 }

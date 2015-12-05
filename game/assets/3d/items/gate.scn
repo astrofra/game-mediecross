@@ -11,7 +11,7 @@
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.757,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
@@ -80,7 +80,7 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -8.6465,
+							"x": -8.6464,
 							"y": 0.0,
 							"z": 0.0
 						}
@@ -97,7 +97,7 @@
 					"gs::core::Transform": {
 						"Position": {
 							"x": 0.0,
-							"y": 5.5026,
+							"y": 5.5027,
 							"z": 0.0
 						},
 						"Rotation": {
@@ -123,8 +123,8 @@
 					"gs::core::Transform": {
 						"Position": {
 							"x": 6.2860000000000009,
-							"y": 5.432,
-							"z": 0.029300000000000004
+							"y": 5.4321,
+							"z": 0.029400000000000004
 						},
 						"Scale": {
 							"x": 0.7951,
@@ -144,8 +144,8 @@
 					"gs::core::Transform": {
 						"Position": {
 							"x": -6.3182,
-							"y": 5.4527,
-							"z": 0.029300000000000004
+							"y": 5.4528,
+							"z": 0.029400000000000004
 						},
 						"Scale": {
 							"x": 0.7951,
@@ -164,13 +164,13 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 7.5939000000000009,
+							"x": 7.594,
 							"y": 2.7371000000000005,
 							"z": 0.0
 						},
 						"Scale": {
 							"x": 1.0,
-							"y": 1.116,
+							"y": 1.1161,
 							"z": 1.0
 						}
 					},
@@ -185,13 +185,13 @@
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -7.658600000000001,
+							"x": -7.6585,
 							"y": 2.7371000000000005,
 							"z": 0.0
 						},
 						"Scale": {
 							"x": 1.0,
-							"y": 1.116,
+							"y": 1.1161,
 							"z": 1.0
 						}
 					},
@@ -201,93 +201,29 @@
 				}
 			},
 			"Node": {
-				"Uid": 12,
+				"Uid": 10,
 				"Name": "Default Camera",
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
 							"x": 6.346100000000001,
-							"y": 8.133700000000001,
-							"z": -16.118100000000003
+							"y": 8.1338,
+							"z": -16.118000000000003
 						},
 						"Rotation": {
-							"x": 0.3889,
-							"y": -0.3922,
+							"x": 0.389,
+							"y": -0.3921,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0001,
-							"y": 1.0001,
-							"z": 1.0001
+							"x": 1.0002,
+							"y": 1.0002,
+							"z": 1.0002
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.1,
+						"ZNear": 0.10010000000000001,
 						"ZFar": 50000.0
-					}
-				}
-			},
-			"Node": {
-				"Uid": 13,
-				"Name": "New Light",
-				"DoNotInstantiate": true,
-				"Components": {
-					"gs::core::Transform": {
-						"Position": {
-							"x": -4.9871,
-							"y": 7.0535000000000009,
-							"z": -10.7989
-						}
-					},
-					"gs::core::Light": {
-						"Shadow": "ShadowMap",
-						"ShadowRange": 0.0,
-						"SpecularColor": {
-							"r": 1.0,
-							"g": 1.0,
-							"b": 1.0
-						},
-						"SpecularIntensity": 1.0
-					}
-				}
-			},
-			"Node": {
-				"Uid": 14,
-				"Name": "Plane",
-				"DoNotInstantiate": true,
-				"Components": {
-					"gs::core::Transform": {},
-					"gs::core::LogicScript": {
-						"gs::core::Script": {
-							"Path": "@core/lua/plane.lua",
-							"Parameters": {
-								"Parameter": {
-									"Name": "width",
-									"Type": "int",
-									"Value": 50
-								},
-								"Parameter": {
-									"Name": "length",
-									"Type": "int",
-									"Value": 50
-								},
-								"Parameter": {
-									"Name": "subdiv_x",
-									"Type": "int",
-									"Value": 1
-								},
-								"Parameter": {
-									"Name": "subdiv_z",
-									"Type": "int",
-									"Value": 1
-								},
-								"Parameter": {
-									"Name": "material",
-									"Type": "gs::render::sMaterial",
-									"Value": "@core/materials/default.mat"
-								}
-							}
-						}
 					}
 				}
 			}
@@ -296,7 +232,7 @@
 		"Skeletons": {},
 		"State": {
 			"CurrentCamera": {
-				"Uid": 12
+				"Uid": 10
 			}
 		}
 	}

@@ -1,7 +1,15 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
+				"BackgroundColor": {
+					"r": 0.4953,
+					"g": 0.4748,
+					"b": 0.4748
+				},
 				"FogColor": {
 					"r": 1.0,
 					"g": 1.0,
@@ -15,11 +23,8 @@
 				"Name": "tile_slow",
 				"Components": {
 					"gs::core::Transform": {},
-					"gs::core::Object": {
-						"Geometry": ""
-					},
+					"gs::core::Object": {},
 					"gs::core::RigidBody": {
-						"Activate": true,
 						"Gravity": {
 							"x": 0.0,
 							"y": -9.81,
@@ -46,15 +51,36 @@
 				"Uid": 2,
 				"Name": "mesh",
 				"Components": {
-					"gs::core::Transform": {
-						"Rotation": {
-							"x": -1.5707,
-							"y": 0.0,
-							"z": 0.0
-						}
-					},
+					"gs::core::Transform": {},
 					"gs::core::Object": {
 						"Geometry": "assets/3d/tile_bumped_low.geo"
+					}
+				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Default Camera",
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": -4.8018,
+							"y": 4.2724,
+							"z": -6.36
+						},
+						"Rotation": {
+							"x": 0.4922,
+							"y": 0.6467,
+							"z": 0.0
+						},
+						"Scale": {
+							"x": 1.0001,
+							"y": 1.0001,
+							"z": 1.0001
+						}
+					},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
 					}
 				}
 			}
@@ -66,6 +92,10 @@
 			}
 		},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 3
+			}
+		}
 	}
 }
