@@ -48,49 +48,44 @@
 				}
 			},
 			"Node": {
-				"Uid": 2,
-				"Name": "mesh",
-				"Components": {
-					"gs::core::Transform": {},
-					"gs::core::Object": {
-						"Geometry": "assets/3d/tile_bumped_low.geo"
-					}
-				}
-			},
-			"Node": {
 				"Uid": 3,
 				"Name": "Default Camera",
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -4.8018,
+							"x": -4.8017,
 							"y": 4.2724,
 							"z": -6.36
 						},
 						"Rotation": {
 							"x": 0.4922,
-							"y": 0.6467,
+							"y": 0.6468,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0001,
-							"y": 1.0001,
-							"z": 1.0001
+							"x": 1.0003,
+							"y": 1.0003,
+							"z": 1.0003
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.1,
+						"ZNear": 0.10020000000000001,
 						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 4,
+				"Name": "mesh",
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Object": {
+						"Geometry": "assets/3d/tile_bumped.geo"
 					}
 				}
 			}
 		},
-		"NodeHierarchy": {
-			"Link": {
-				"Node": 2,
-				"Parent": 1
-			}
-		},
+		"NodeHierarchy": {},
 		"Skeletons": {},
 		"State": {
 			"CurrentCamera": {
