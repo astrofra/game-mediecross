@@ -39,5 +39,7 @@ def draw():
 	font_size = 80
 	screen_clock += dt_sec
 
-	render.text2d(x - size.x * 0.001, y - size.y * 0.001, "Press Space", font_size, gs.Color(0,0,0, fade_sin(screen_clock) * 0.5), "assets/fonts/eb-garamond-regular.ttf")
+	render.text2d(x - size.x * 0.001, y - size.y * 0.001, "Press Space", font_size, gs.Color(0,0,0, fade_sin(screen_clock) * 0.5),  globals.font_garamond)
 	render.text2d(x, y, "Press Space", font_size, gs.Color(1,1,1, fade_sin(screen_clock)), "assets/fonts/eb-garamond-regular.ttf")
+
+	render.text2d(0, y - 80.0, "The MedieCross Project 2010-2015, made for TigSource.com.\nCode : Emmanuel Julien - Art : Francois Gutherz\nAnimation : Ryan Hagen - Engine : Harfang3D", 30, gs.Color.Black, globals.font_garamond)
