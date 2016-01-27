@@ -1,5 +1,8 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"AmbientColor": {
@@ -30,10 +33,26 @@
 						"Geometry": "assets/3d/mediecross_subtitle.geo"
 					}
 				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Default Camera",
+				"DoNotInstantiate": true,
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
+					}
+				}
 			}
 		},
 		"NodeHierarchy": {},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 2
+			}
+		}
 	}
 }

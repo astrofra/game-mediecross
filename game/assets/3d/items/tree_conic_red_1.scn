@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.757,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -59,10 +62,26 @@
 						"Geometry": "assets/3d/hanoi_red.geo"
 					}
 				}
+			},
+			"Node": {
+				"Uid": 3,
+				"Name": "Default Camera",
+				"DoNotInstantiate": true,
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
+					}
+				}
 			}
 		},
 		"NodeHierarchy": {},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 3
+			}
+		}
 	}
 }

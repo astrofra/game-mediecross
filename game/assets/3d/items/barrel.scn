@@ -40,13 +40,7 @@
 					"gs::core::Object": {
 						"Geometry": "assets/3d/barrel.geo"
 					},
-					"gs::core::RigidBody": {
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
-						}
-					},
+					"gs::core::RigidBody": {},
 					"gs::core::SphereCollision": {
 						"gs::core::Collision": {
 							"Mass": 6.0,
@@ -60,12 +54,13 @@
 			"Node": {
 				"Uid": 2,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
 							"x": 7.0751,
 							"y": 4.2773,
-							"z": -4.7843
+							"z": -4.7842
 						},
 						"Rotation": {
 							"x": 0.46440000000000006,
@@ -73,13 +68,13 @@
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0002,
-							"y": 1.0002,
-							"z": 1.0002
+							"x": 1.0003,
+							"y": 1.0003,
+							"z": 1.0003
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.10010000000000001,
+						"ZNear": 0.10020000000000001,
 						"ZFar": 50000.0
 					}
 				}

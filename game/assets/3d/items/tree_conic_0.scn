@@ -66,12 +66,13 @@
 			"Node": {
 				"Uid": 3,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
 							"x": 6.258,
 							"y": 6.4539,
-							"z": -12.1311
+							"z": -12.131
 						},
 						"Rotation": {
 							"x": 0.2024,
@@ -79,13 +80,13 @@
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0002,
-							"y": 1.0002,
-							"z": 1.0002
+							"x": 1.0003,
+							"y": 1.0003,
+							"z": 1.0003
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.10010000000000001,
+						"ZNear": 0.10020000000000001,
 						"ZFar": 50000.0
 					}
 				}

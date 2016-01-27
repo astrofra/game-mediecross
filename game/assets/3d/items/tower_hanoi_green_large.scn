@@ -11,7 +11,7 @@
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.757,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
@@ -48,13 +48,7 @@
 				"Components": {
 					"gs::core::Transform": {},
 					"gs::core::Object": {},
-					"gs::core::RigidBody": {
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
-						}
-					},
+					"gs::core::RigidBody": {},
 					"gs::core::CapsuleCollision": {
 						"gs::core::Collision": {
 							"Matrix": {
@@ -96,7 +90,7 @@
 							"CollisionMask": 0
 						},
 						"Length": 0.9001,
-						"Radius": 1.6002
+						"Radius": 1.6003
 					},
 					"gs::core::CapsuleCollision": {
 						"gs::core::Collision": {
@@ -117,26 +111,27 @@
 			"Node": {
 				"Uid": 3,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
 							"x": 2.5895,
-							"y": 7.2603,
-							"z": -9.3876
+							"y": 7.260400000000001,
+							"z": -9.387500000000001
 						},
 						"Rotation": {
 							"x": 0.627,
-							"y": -0.2579,
+							"y": -0.25780000000000005,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0001,
-							"y": 1.0001,
-							"z": 1.0001
+							"x": 1.0002,
+							"y": 1.0002,
+							"z": 1.0002
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.1,
+						"ZNear": 0.10010000000000001,
 						"ZFar": 50000.0
 					}
 				}

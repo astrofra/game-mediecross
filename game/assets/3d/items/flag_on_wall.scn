@@ -38,7 +38,7 @@
 						},
 						"Rotation": {
 							"x": -0.0,
-							"y": 1.5708,
+							"y": -1.5707,
 							"z": 0.0
 						}
 					},
@@ -108,27 +108,45 @@
 			"Node": {
 				"Uid": 5,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": 7.1143,
-							"y": 3.0626,
-							"z": -4.4372
+							"x": 13.8789,
+							"y": 6.0724,
+							"z": -8.6415
 						},
 						"Rotation": {
-							"x": 0.3612,
-							"y": -1.0148000000000002,
+							"x": 0.3614,
+							"y": -1.0147000000000002,
 							"z": 0.0
 						},
 						"Scale": {
 							"x": 1.0,
-							"y": 1.0001,
-							"z": 1.0001
+							"y": 1.0003,
+							"z": 1.0003
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.10010000000000001,
+						"ZNear": 0.10020000000000001,
 						"ZFar": 50000.0
+					}
+				}
+			},
+			"Node": {
+				"Uid": 6,
+				"Name": "New Light",
+				"DoNotInstantiate": true,
+				"Components": {
+					"gs::core::Transform": {
+						"Position": {
+							"x": 5.7673000000000009,
+							"y": 3.2774,
+							"z": 0.0
+						}
+					},
+					"gs::core::Light": {
+						"ShadowRange": 0.0
 					}
 				}
 			}
