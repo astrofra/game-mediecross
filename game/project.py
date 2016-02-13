@@ -30,6 +30,7 @@ else:
 	app_path = os.path.dirname(os.path.realpath(__file__))
 
 # gs.plus.create_workers()
+gs.LoadPlugins(gs.get_default_plugins_path())
 render.init(1280, 720, os.path.normcase(os.path.realpath(os.path.join(app_path, "pkg.core"))))
 
 # provide access to the assets folder
