@@ -27,7 +27,7 @@
 		},
 		"Nodes": {
 			"Node": {
-				"Uid": 2,
+				"Uid": 1,
 				"Name": "Food_mesh",
 				"Components": {
 					"gs::core::Transform": {
@@ -43,7 +43,7 @@
 				}
 			},
 			"Node": {
-				"Uid": 3,
+				"Uid": 2,
 				"Name": "Food",
 				"Components": {
 					"gs::core::Transform": {},
@@ -51,8 +51,9 @@
 				}
 			},
 			"Node": {
-				"Uid": 4,
+				"Uid": 3,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
@@ -66,9 +67,9 @@
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0003,
-							"y": 1.0003,
-							"z": 1.0003
+							"x": 1.0004,
+							"y": 1.0004,
+							"z": 1.0004
 						}
 					},
 					"gs::core::Camera": {
@@ -80,14 +81,14 @@
 		},
 		"NodeHierarchy": {
 			"Link": {
-				"Node": 2,
-				"Parent": 3
+				"Node": 1,
+				"Parent": 2
 			}
 		},
 		"Skeletons": {},
 		"State": {
 			"CurrentCamera": {
-				"Uid": 4
+				"Uid": 3
 			}
 		}
 	}

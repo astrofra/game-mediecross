@@ -71,10 +71,11 @@
 			"Node": {
 				"Uid": 4,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
-							"x": -2.5316,
+							"x": -2.5315000000000005,
 							"y": 2.1753,
 							"z": -7.2579
 						},
@@ -84,9 +85,9 @@
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0002,
-							"y": 1.0002,
-							"z": 1.0002
+							"x": 1.0003,
+							"y": 1.0003,
+							"z": 1.0003
 						}
 					},
 					"gs::core::Camera": {

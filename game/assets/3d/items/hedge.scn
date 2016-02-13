@@ -53,11 +53,6 @@
 					"gs::core::RigidBody": {
 						"gs::core::Component": {
 							"Enabled": false
-						},
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
 						}
 					}
 				}
@@ -89,11 +84,6 @@
 					"gs::core::RigidBody": {
 						"gs::core::Component": {
 							"Enabled": false
-						},
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
 						}
 					}
 				}
@@ -120,11 +110,6 @@
 					"gs::core::RigidBody": {
 						"gs::core::Component": {
 							"Enabled": false
-						},
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
 						}
 					}
 				}
@@ -149,13 +134,7 @@
 				"Components": {
 					"gs::core::Transform": {},
 					"gs::core::Object": {},
-					"gs::core::RigidBody": {
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
-						}
-					},
+					"gs::core::RigidBody": {},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
 							"Matrix": {
@@ -175,22 +154,23 @@
 			"Node": {
 				"Uid": 6,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
 							"x": 3.2396000000000004,
 							"y": 7.0743,
-							"z": 8.7193
+							"z": 8.7194
 						},
 						"Rotation": {
-							"x": 0.54,
+							"x": 0.5401,
 							"y": -2.7857000000000005,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0002,
-							"y": 1.0002,
-							"z": 1.0002
+							"x": 1.0003,
+							"y": 1.0003,
+							"z": 1.0003
 						}
 					},
 					"gs::core::Camera": {

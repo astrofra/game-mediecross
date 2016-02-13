@@ -1,21 +1,24 @@
 {
 	"Scene": {
+		"Editor": {
+			"SceneTools": {}
+		},
 		"Components": {
 			"gs::core::Environment": {
 				"BackgroundColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.7569,
+					"r": 0.757,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
 				"AmbientIntensity": 0.25,
 				"FogColor": {
 					"r": 0.5412,
-					"g": 0.4706,
+					"g": 0.4707,
 					"b": 0.502
 				},
 				"FogNear": 10.0,
@@ -31,14 +34,7 @@
 					"gs::core::Object": {
 						"Geometry": "assets/3d/Box02.geo"
 					},
-					"gs::core::RigidBody": {
-						"Activate": true,
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
-						}
-					},
+					"gs::core::RigidBody": {},
 					"gs::core::ConvexCollision": {
 						"gs::core::Collision": {
 							"SelfMask": 0,
@@ -47,10 +43,26 @@
 						"Path": ""
 					}
 				}
+			},
+			"Node": {
+				"Uid": 2,
+				"Name": "Default Camera",
+				"DoNotInstantiate": true,
+				"Components": {
+					"gs::core::Transform": {},
+					"gs::core::Camera": {
+						"ZNear": 0.1,
+						"ZFar": 50000.0
+					}
+				}
 			}
 		},
 		"NodeHierarchy": {},
 		"Skeletons": {},
-		"State": {}
+		"State": {
+			"CurrentCamera": {
+				"Uid": 2
+			}
+		}
 	}
 }

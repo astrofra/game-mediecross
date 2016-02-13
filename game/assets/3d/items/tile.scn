@@ -24,13 +24,7 @@
 				"Components": {
 					"gs::core::Transform": {},
 					"gs::core::Object": {},
-					"gs::core::RigidBody": {
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
-						}
-					},
+					"gs::core::RigidBody": {},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
 							"Matrix": {
@@ -48,8 +42,9 @@
 				}
 			},
 			"Node": {
-				"Uid": 3,
+				"Uid": 2,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
@@ -63,9 +58,9 @@
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0003,
-							"y": 1.0003,
-							"z": 1.0003
+							"x": 1.0004,
+							"y": 1.0004,
+							"z": 1.0004
 						}
 					},
 					"gs::core::Camera": {
@@ -75,7 +70,7 @@
 				}
 			},
 			"Node": {
-				"Uid": 4,
+				"Uid": 3,
 				"Name": "mesh",
 				"Components": {
 					"gs::core::Transform": {},
@@ -89,7 +84,7 @@
 		"Skeletons": {},
 		"State": {
 			"CurrentCamera": {
-				"Uid": 3
+				"Uid": 2
 			}
 		}
 	}

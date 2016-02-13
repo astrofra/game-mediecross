@@ -11,7 +11,7 @@
 					"b": 0.502
 				},
 				"AmbientColor": {
-					"r": 0.757,
+					"r": 0.7571,
 					"g": 0.44320000000000006,
 					"b": 0.5099
 				},
@@ -54,13 +54,7 @@
 						}
 					},
 					"gs::core::Object": {},
-					"gs::core::RigidBody": {
-						"Gravity": {
-							"x": 0.0,
-							"y": -9.81,
-							"z": 0.0
-						}
-					},
+					"gs::core::RigidBody": {},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
 							"Matrix": {
@@ -87,7 +81,7 @@
 								"m21": -0.4539,
 								"m12": 0.454,
 								"m22": 0.8911,
-								"m13": -1.0062,
+								"m13": -1.0061,
 								"m23": -0.4968
 							},
 							"SelfMask": 0,
@@ -132,6 +126,7 @@
 			"Node": {
 				"Uid": 5,
 				"Name": "Default Camera",
+				"DoNotInstantiate": true,
 				"Components": {
 					"gs::core::Transform": {
 						"Position": {
@@ -141,17 +136,17 @@
 						},
 						"Rotation": {
 							"x": -0.0873,
-							"y": -0.9206000000000001,
+							"y": -0.9205000000000001,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0001,
-							"y": 1.0001,
+							"x": 1.0002,
+							"y": 1.0002,
 							"z": 1.0
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.1,
+						"ZNear": 0.10010000000000001,
 						"ZFar": 50000.0
 					}
 				}
