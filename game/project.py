@@ -3,18 +3,14 @@ import gs.plus
 import gs.plus.render as render
 import gs.plus.input as input
 import gs.plus.clock as clock
+import gs.plus.audio as audio
 
 import globals
 import level_title
 import os
 import sys
 
-
 globals.prev_scene_fade = globals.current_scene = level_title
-# globals.prev_scene_fade = globals.current_scene = ecran_eggs
-
-
-show_help = False
 
 fade_percent = 1
 fade_speed = 1.0
@@ -32,6 +28,9 @@ else:
 # gs.plus.create_workers()
 gs.LoadPlugins(gs.get_default_plugins_path())
 render.init(1280, 720, os.path.normcase(os.path.realpath(os.path.join(app_path, "pkg.core"))))
+gs.MountFileDriver(gs.StdFileDriver("assets"), '@assets')
+
+audio.init()
 
 # provide access to the assets folder
 data_path = os.path.normcase(os.path.realpath(app_path))
@@ -41,10 +40,10 @@ render.set_blend_mode2d(render.BlendAlpha)
 
 globals.current_scene.setup()
 
-
 def fade_between_scene():
 	global state, fade_percent
 	if globals.prev_scene_fade != globals.current_scene:
+		globals.current_scene.exit()
 		# transition to the new scene
 		state = state_fade_in
 

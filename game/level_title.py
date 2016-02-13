@@ -5,6 +5,7 @@ import gs.plus.render as render
 import gs.plus.input as input
 import gs.plus.scene as scene
 import gs.plus.clock as clock
+import gs.plus.audio as audio
 
 import globals
 import level_game
@@ -12,11 +13,19 @@ import level_game
 scn = None
 dt_sec = 1.0 / 60.0
 screen_clock = 0.0
+title_music = None
 
 def setup():
-	global scn
+	global scn, title_music
 	scn = scene.new_scene()
-	scn.Load('assets/3d/level_title.scn', gs.SceneLoadContext(render.get_render_system()))
+	scn.Load('@assets/3d/level_title.scn', gs.SceneLoadContext(render.get_render_system()))
+	title_music = audio.get_mixer().Stream("@assets/sfx/sfx_cellos_loop.ogg")
+	# audio.get_mixer().SetChannelState(title_music, gs.MixerRepeat) # FIXME
+
+
+def exit():
+	audio.get_mixer().Stop(title_music)
+	scene.Clear(scn)
 
 
 def update():
@@ -39,8 +48,8 @@ def draw():
 	font_size = 80
 	screen_clock += dt_sec
 
-	render.text2d(x - size.x * 0.001, y - size.y * 0.001, "Press Space", font_size, gs.Color(0,0,0, fade_sin(screen_clock) * 0.5),  globals.font_garamond)
-	render.text2d(x, y, "Press Space", font_size, gs.Color(1,1,1, fade_sin(screen_clock)), "assets/fonts/eb-garamond-regular.ttf")
+	render.text2d(x - size.x * 0.001, y - size.y * 0.001, "Press Enter", font_size, gs.Color(0,0,0, fade_sin(screen_clock) * 0.5),  globals.font_garamond)
+	render.text2d(x, y, "Press Enter", font_size, gs.Color(1,1,1, fade_sin(screen_clock)), globals.font_garamond)
 
 	y -= 40
 	render.text2d(300, y - 20.0, "The MedieCross Project 2010-2015, made for TigSource.com.", 30, gs.Color.Black, globals.font_garamond)
