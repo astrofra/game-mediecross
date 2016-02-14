@@ -54,9 +54,12 @@
 						}
 					},
 					"gs::core::Object": {},
-					"gs::core::RigidBody": {},
+					"gs::core::RigidBody": {
+						"IsSleeping": true
+					},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
+							"Mass": 0.0,
 							"Matrix": {
 								"m11": 0.8911,
 								"m21": 0.454,
@@ -65,8 +68,7 @@
 								"m13": -0.9958,
 								"m23": 0.8229000000000001
 							},
-							"SelfMask": 0,
-							"CollisionMask": 0
+							"SelfMask": 0
 						},
 						"Dimensions": {
 							"x": 3.0,
@@ -76,6 +78,7 @@
 					},
 					"gs::core::BoxCollision": {
 						"gs::core::Collision": {
+							"Mass": 0.0,
 							"Matrix": {
 								"m11": 0.8911,
 								"m21": -0.4539,
@@ -84,8 +87,7 @@
 								"m13": -1.0061,
 								"m23": -0.4968
 							},
-							"SelfMask": 0,
-							"CollisionMask": 0
+							"SelfMask": 0
 						},
 						"Dimensions": {
 							"x": 3.0,
@@ -136,17 +138,17 @@
 						},
 						"Rotation": {
 							"x": -0.0873,
-							"y": -0.9205000000000001,
+							"y": -0.9204,
 							"z": 0.0
 						},
 						"Scale": {
-							"x": 1.0002,
-							"y": 1.0002,
+							"x": 1.0003,
+							"y": 1.0003,
 							"z": 1.0
 						}
 					},
 					"gs::core::Camera": {
-						"ZNear": 0.10010000000000001,
+						"ZNear": 0.10020000000000001,
 						"ZFar": 50000.0
 					}
 				}
