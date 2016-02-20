@@ -9,6 +9,7 @@ import globals
 import level_title
 import os
 import sys
+import asyncio
 
 globals.prev_scene_fade = globals.current_scene = level_title
 
@@ -53,7 +54,9 @@ def fade_between_scene():
 		if fade_percent > 1:
 			fade_percent = 1
 			state = state_fade_out
-			globals.current_scene.setup()
+			loop = asyncio.get_event_loop()
+			loop.run_until_complete(globals.current_scene.setup())
+			loop.close()
 			globals.prev_scene_fade = globals.current_scene
 
 	#launch fade out with the new scene

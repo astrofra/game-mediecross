@@ -20,7 +20,7 @@ def setup():
 	scn = scene.new_scene()
 	scn.Load('@assets/3d/level_title.scn', gs.SceneLoadContext(render.get_render_system()))
 	title_music = audio.get_mixer().Stream("@assets/sfx/sfx_cellos_loop.ogg")
-	# audio.get_mixer().SetChannelState(title_music, gs.MixerRepeat) # FIXME
+	# audio.get_mixer().SetChannelState(title_music, gs.MixerChannelState(0.0, 1.0, gs.MixerRepeat))
 
 
 def exit():

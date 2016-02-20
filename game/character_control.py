@@ -13,5 +13,5 @@ class CharacterControl:
 		self.scene.AddNode(self.node)
 
 	def update(self, dt):
-		self.transform.SetPosition(self.transform.GetPosition() + gs.Vector3(0, 0, dt))
+		self.transform.SetPosition(self.transform.GetPosition() + gs.Vector3(0, 0, dt * 10.0))
 		print(self.transform.GetPosition().z)
