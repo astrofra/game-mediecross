@@ -1,0 +1,13 @@
+<Version=1.0>
+<Environment=
+	<Name="KnightRun">
+	<Authors="Francois Gutherz, Emmanuel Julien, Ryan Hagen">
+	<Description="">
+	<Company="Copyright 2010-2011">
+	<ScriptUnit=
+		<ScriptPath="scripts/project.nut">
+		<Class="SimpleGameProject">
+	>
+	<Include>
+	<SearchPaths>
+>

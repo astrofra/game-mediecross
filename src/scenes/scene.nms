@@ -1,0 +1,30 @@
+<Version=1.0>
+<Scene=
+	<Items>
+	<Constraints>
+	<Globals=
+		<BackgroundColor=
+			<X=0.000000>
+			<Y=0.000000>
+			<Z=0.000000>
+		>
+		<AmbientColor=
+			<X=0.000000>
+			<Y=0.000000>
+			<Z=0.000000>
+		>
+		<TimeOfDay=0.500000>
+		<AmbientIntensity=1.000000>
+		<TargetExposure=0.250000>
+		<FogNear=0.000000>
+		<FogFar=0.000000>
+		<FogColor=
+			<X=0.000000>
+			<Y=0.000000>
+			<Z=0.000000>
+		>
+	>
+	<Physics=
+		<Frequency=59.999996>
+	>
+>
