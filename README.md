@@ -1,4 +1,4 @@
-# mediecross-ookpy
+# Mediécross
 
 These are the complete sources to the TIG Source AGBIC contest entry Mediecross.
 
