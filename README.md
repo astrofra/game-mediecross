@@ -8,7 +8,7 @@ _I decided to work in this Famicase:_
 
 ![](img/famicase_34-Dot_Additive.png)
 
-## How to play
+## :joystick: How to play
 
 Run in a corridor, avoid the obstacles (barrels, slowering tiles...), jump on the bumpers, get the food for extra-time, reach the end of the corridor.
 
@@ -18,7 +18,7 @@ Run in a corridor, avoid the obstacles (barrels, slowering tiles...), jump on th
 - Animation: [Ryan Hagen](https://www.behance.net/ryanhagen)
 - Music: [Tobyk](https://freesound.org/people/tobyk/) and [Juskiddink](https://freesound.org/people/juskiddink/) on [Freesound.org](https//Freesound.org)
 
-The game is built on top of the [GameStart engine](https://www.youtube.com/@GameStart3D/videos) and entirely implemented in [Squirrel]()
+The game is built on top of the [GameStart engine](https://www.youtube.com/@GameStart3D/videos) and entirely implemented in [Squirrel](https://github.com/albertodemichelis/squirrel)
 
 ## Screenshots
 
@@ -34,7 +34,7 @@ The game is built on top of the [GameStart engine](https://www.youtube.com/@Game
 ## Changelog
 
 - Github release on 2023-05-14
-- Updated on 2012-12-01, made compatible with the GameStart Beta 2.
+- Google code release on 2012-12-01, made compatible with the GameStart Beta 2.
 - Revision 118
  - Add 3 retries.
  - Add +0.5s bonus when eating meat.
@@ -62,4 +62,4 @@ _I tried to mimic the look of a series of clay miniatures._<br><br>
 _The finaly animation was done by Ryan Hagen to replace my horrible placeholder walkcycle._<br><br>
 
 ![](img/wip/game_layout.png)<br>
-_The whole layout started to appear as soon as I decided to recreate the game design of Metrocross._
+_The whole layout started to appear as soon as I decided to recreate the game design of [Metro-Cross](https://en.wikipedia.org/wiki/Metro-Cross)._
