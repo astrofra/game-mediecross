@@ -1,3 +1,5 @@
+![](img/mediecross-title.png)
+
 # Mediécross
 
 These are the complete sources to the TIG Source AGBIC contest entry Mediecross.
@@ -12,6 +14,17 @@ This package contains the complete project and sources to run this game using th
 
 We hope it can help you to better understand how to make your own projects using GameStart.
 Good studying!
+
+## Screenshots
+
+![|400](img/mediecross-shot-000.png)
+![|400](img/mediecross-shot-001.png)
+![|400](img/mediecross-shot-002.png)
+![|400](img/mediecross-shot-003.png)
+![|400](img/mediecross-shot-004.png)
+![|400](img/mediecross-shot-005.png)
+![|400](img/mediecross-shot-006.png)
+![|400](img/mediecross-shot-007.png)
 
 ## Changelog
 
