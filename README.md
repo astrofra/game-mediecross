@@ -1,6 +1,10 @@
-![](img/mediecross-title.png)
+<img src="img/tigslogo.png" align="right" width="80"/>
 
 # Mediécross
+
+_A mini-game created for the AGBIC Contest on TigSource.com in 2010._
+
+![Mediecross title](img/mediecross-title.png)
 
 These are the complete sources to the [TIG Source AGBIC 2010 contest](https://www.tigsource.com/2010/06/28/a-game-by-its-cover-competition/) entry **Mediecross**. The concept of this contest is to implement a complete game, based on one of the imaginary game cartridges found in the [Famicase collection](https://famicase.com/10/index.html).
 
